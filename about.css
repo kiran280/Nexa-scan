@@ -1,0 +1,1704 @@
+
+/* ==========================================
+   NEXA SCAN ABOUT PAGE
+   Light theme is the default
+========================================== */
+
+.nexa-about-page {
+  --nexa-shadow: 0 18px 55px rgba(19, 55, 82, 0.09);
+  --nexa-radius: 22px;
+  width: 100%;
+  overflow: clip;
+  color: var(--nexa-text);
+  background: var(--nexa-bg);
+  line-height: 1.7;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.nexa-about-page *,
+.nexa-about-page *::before,
+.nexa-about-page *::after {
+  box-sizing: border-box;
+}
+
+.nexa-about-page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nexa-about-page h1,
+.nexa-about-page h2,
+.nexa-about-page h3,
+.nexa-about-page p {
+  margin-top: 0;
+}
+
+.nexa-about-page h1,
+.nexa-about-page h2,
+.nexa-about-page h3 {
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.nexa-about-page a {
+  text-decoration: none;
+}
+
+.nexa-about-container {
+  width: min(1050px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.nexa-about-section {
+  position: relative;
+  padding-block: 105px;
+  background: var(--nexa-bg);
+  transition: background-color .3s ease;
+}
+
+.nexa-about-section-heading {
+  max-width: 690px;
+  margin-bottom: 45px;
+}
+
+.nexa-about-section-heading h2,
+.nexa-about-copy h2 {
+  margin-bottom: 20px;
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 600;
+  color: var(--green)
+}
+
+.nexa-about-section-heading h2 span,
+.nexa-about-copy h2 span {
+  color: var(--green);
+}
+
+.nexa-about-section-heading > p,
+.nexa-about-copy > p,
+.nexa-about-tech-heading > p,
+.nexa-about-why-heading > p {
+  color: var(--nexa-muted);
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+.nexa-about-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 17px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.nexa-about-center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.nexa-about-center .nexa-about-kicker {
+  justify-content: center;
+}
+
+/* HERO */
+
+.nexa-about-hero {
+  min-height: 690px;
+  min-height: min(760px, 88svh);
+  position: relative;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  color: #ffffff;
+  background: #09263e;
+}
+
+.nexa-about-hero-bg,
+.nexa-about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.nexa-about-hero-bg {
+  background-image: url("images/about\ hero.jpg");
+  background-position: center;
+  background-size: cover;
+  animation: nexaHeroZoom 18s ease-in-out infinite alternate;
+}
+
+.nexa-about-hero-overlay {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(4, 26, 45, .96) 0%, rgba(4, 35, 58, .85) 48%, rgba(4, 35, 58, .22) 100%),
+    linear-gradient(0deg, rgba(3, 22, 38, .4), transparent 45%);
+}
+
+.nexa-about-hero-content {
+  padding-block: 100px 120px;
+  animation: nexaSlideUp .9s both;
+}
+
+.nexa-about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.nexa-about-eyebrow-line {
+  width: 38px;
+  height: 2px;
+  background: var(--nexa-teal);
+}
+
+.nexa-about-hero h1 {
+  max-width: 830px;
+  margin-bottom: 25px;
+  font-size: clamp(28px, 4.1vw, 54px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  color: var(--green);
+}
+
+.nexa-about-hero h1 span,
+.nexa-about-cta h2 span {
+  color: var(--blue);
+}
+
+.nexa-about-hero-content > p,
+.nexa-about-cta-content > p {
+  max-width: 620px;
+  margin-bottom: 32px;
+  color: rgba(255,255,255,.83);
+  font-size: clamp(.98rem, 1.5vw, 1.1rem);
+  line-height: 1.9;
+}
+
+.nexa-about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.nexa-about-btn {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 23px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 750;
+  transition: transform .25s ease, background-color .25s ease,
+    border-color .25s ease, box-shadow .25s ease;
+}
+
+.nexa-about-btn:hover {
+  transform: translateY(-3px);
+}
+
+.nexa-about-btn-primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  box-shadow: 0 8px 25px rgba(22,119,200,.25);
+}
+
+.nexa-about-btn-primary:hover {
+  box-shadow: 0 12px 30px rgba(24,166,166,.3);
+}
+
+.nexa-about-btn-outline {
+  color: #ffffff;
+  border-color: var(--green);
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(8px);
+}
+
+.nexa-about-btn-outline:hover {
+  border-color: var(--blue);
+  background: rgba(24,166,166,.16);
+  color: var(--blue)
+}
+
+.nexa-about-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 34px;
+  color: rgba(255,255,255,.78);
+  font-size: .85rem;
+}
+
+.nexa-about-status-dot,
+.nexa-about-service-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: #71e0d3;
+  box-shadow: 0 0 0 5px rgba(113,224,211,.13);
+}
+
+.nexa-about-hero-label {
+  position: absolute;
+  right: max(32px, calc((100% - 1180px) / 2));
+  bottom: 30px;
+  color: rgba(255,255,255,.65);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.nexa-about-hero-label span {
+  color: #71e0d3;
+}
+
+/* WHO WE ARE */
+
+.nexa-about-intro {
+  background: var(--nexa-bg);
+}
+
+.nexa-about-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(45px, 7vw, 95px);
+}
+
+.nexa-about-image-stack {
+  position: relative;
+  padding: 0 26px 30px 0;
+}
+
+.nexa-about-main-image {
+  position: relative;
+  z-index: 1;
+  height: 450px;
+  overflow: hidden;
+  border-radius: var(--nexa-radius);
+  box-shadow: var(--blue);
+  border: 1px solid var(--green);
+
+}
+
+.nexa-about-main-image img,
+.nexa-about-commitment-image > img {
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.nexa-about-main-image:hover img,
+.nexa-about-commitment-image:hover > img {
+  transform: scale(1.045);
+}
+
+.nexa-about-image-accent {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  height: 62%;
+  border-radius: var(--nexa-radius);
+  background: linear-gradient(135deg, var(--nexa-blue), var(--nexa-teal));
+  opacity: .9;
+}
+
+.nexa-about-image-card {
+  position: absolute;
+  z-index: 2;
+  right: -12px;
+  bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 290px;
+  padding: 19px 22px;
+  border: 1.5px solid var(--blue);
+  border-radius: 14px;
+  color: var(--nexa-text);
+  background: var(--nexa-card);
+  box-shadow: var(--nexa-shadow);
+}
+
+.nexa-about-card-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 43px;
+  border-radius: 12px;
+  color: black;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  font-size: 1.7rem;
+}
+
+.nexa-about-image-card strong {
+  display: block;
+  font-size: .91rem;
+  color: var(--green);
+}
+
+.nexa-about-image-card p {
+  margin: 4px 0 0;
+  color: var(--nexa-muted);
+  font-size: 14px;
+}
+
+.nexa-about-copy h2 {
+  margin-bottom: 23px;
+}
+
+.nexa-about-value-list {
+  display: grid;
+  gap: 13px;
+  margin: 28px 0;
+}
+
+.nexa-about-value-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: .92rem;
+  font-weight: 650;
+}
+
+.nexa-about-check {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 23px;
+  border-radius: 50%;
+  color: var(--green);
+  background: rgba(33,155,118,.12);
+  font-size: .8rem;
+  font-weight: 900;
+}
+
+.nexa-about-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+  font-size: .93rem;
+  font-weight: 800;
+}
+
+.nexa-about-text-link span {
+  transition: transform .2s ease;
+  color: var(--green);
+}
+
+.nexa-about-text-link:hover span {
+  transform: translateX(5px);
+  color: var(--green);
+}
+
+/* MISSION / VISION */
+
+.nexa-about-mission,
+.nexa-about-why {
+  background: var(--nexa-bg-soft);
+}
+
+.nexa-about-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.nexa-about-purpose-card {
+  position: relative;
+  min-height: 285px;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid var(--green);
+  border-radius: 50px;
+  background: var(--nexa-card);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.nexa-about-purpose-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--nexa-teal);
+  box-shadow: var(--blue);
+}
+
+.nexa-about-purpose-featured {
+  border-color: rgba(24,166,166,.55);
+  background: linear-gradient(145deg, rgba(22,119,200,.08), rgba(24,166,166,.08)), var(--nexa-card);
+}
+
+.nexa-about-purpose-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.nexa-about-purpose-number {
+  color: var(--blue);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.nexa-about-purpose-symbol {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--green);
+  border-radius: 13px;
+  color: var(--blue);
+  background: rgba(22,119,200,.07);
+  font-size: 1.65rem;
+}
+
+.nexa-about-purpose-card h3 {
+  margin-bottom: 13px;
+  font-size: 1.35rem;
+  color: var(--green);
+}
+
+.nexa-about-purpose-card p {
+  margin-bottom: 23px;
+  color: var(--nexa-muted);
+  font-size: .91rem;
+  line-height: 1.8;
+}
+
+.nexa-about-purpose-line {
+  width: 50px;
+  height: 3px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--blue), var(--green));
+  transition: width .3s ease;
+}
+
+.nexa-about-purpose-card:hover .nexa-about-purpose-line {
+  width: 95px;
+}
+
+/* TECHNOLOGY */
+
+.nexa-about-technology {
+  background: var(--nexa-bg);
+}
+
+.nexa-about-tech-heading,
+.nexa-about-why-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.nexa-about-tech-heading .nexa-about-section-heading,
+.nexa-about-why-heading .nexa-about-section-heading {
+  margin-bottom: 0;
+}
+
+.nexa-about-tech-heading > p,
+.nexa-about-why-heading > p {
+  max-width: 440px;
+  margin-bottom: 8px;
+}
+
+.nexa-about-tech-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 22px;
+}
+
+.nexa-about-tech-card {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 20px;
+  color: #ffffff;
+  background: #102b40;
+}
+
+.nexa-about-tech-card > img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  transition: transform .65s ease;
+}
+
+.nexa-about-tech-card:hover > img {
+  transform: scale(1.06);
+}
+
+.nexa-about-tech-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(3,20,35,.95), rgba(3,20,35,.03) 90%);
+}
+
+.nexa-about-tech-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+}
+
+
+.nexa-about-tech-content h3 {
+  max-width: 430px;
+  margin-bottom: 12px;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.nexa-about-tech-content p {
+  max-width: 480px;
+  margin-bottom: 0;
+  color: rgba(255,255,255,.8);
+  font-size: .89rem;
+  line-height: 1.75;
+}
+
+.nexa-about-service-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 27px;
+}
+
+.nexa-about-service-strip > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 65px;
+  padding: 17px 20px;
+  border: 1px solid var(--green);
+  border-radius: 12px;
+  background: var(--nexa-card);
+  font-size: .9rem;
+  font-weight: 750;
+}
+
+.nexa-about-service-dot {
+  background: var(--green);
+  box-shadow: none;
+}
+
+
+/* PATIENT COMMITMENT */
+
+.nexa-about-commitment {
+  background: var(--nexa-bg-soft);
+}
+
+.nexa-about-commitment-list {
+  display: grid;
+  gap: 23px;
+  margin-top: 32px;
+}
+
+.nexa-about-commitment-list article {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.nexa-about-commitment-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 46px;
+  border: 1px solid var(--green);
+  border-radius: 13px;
+  color: var(--blue);
+  background: var(--nexa-card);
+  font-size: .82rem;
+  font-weight: 800;
+}
+
+.nexa-about-commitment-list h3 {
+  margin: 2px 0 7px;
+  font-size: 1.08rem;
+  color: var(--blue);
+}
+
+.nexa-about-commitment-list p {
+  margin-bottom: 0;
+  color: var(--nexa-muted);
+  font-size: .89rem;
+  line-height: 1.8;
+}
+
+.nexa-about-commitment-image {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+  border-radius: 50px;
+  background: #dbe9ef;
+  box-shadow: var(--nexa-shadow);
+}
+
+.nexa-about-image-caption {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px 20px;
+  border: 1px solid var(--green);
+  border-radius: 13px;
+  color: #ffffff;
+  background: rgba(5,31,49,.83);
+  backdrop-filter: blur(12px);
+}
+
+.nexa-about-caption-mark {
+  width: 4px;
+  height: 38px;
+  flex: 0 0 4px;
+  border-radius: 5px;
+  background: var(--blue);
+}
+
+.nexa-about-image-caption strong {
+  font-size: .95rem;
+  color: var(--green);
+}
+
+.nexa-about-image-caption p {
+  margin: 4px 0 0;
+  color: rgba(255,255,255,.75);
+  font-size: .78rem;
+}
+
+/* TEAM */
+
+.nexa-about-team {
+  background: var(--nexa-bg);
+}
+
+.nexa-about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.nexa-about-team-card {
+  overflow: hidden;
+  border: 1px solid var(--green);
+  border-radius: 30px;
+  background: var(--nexa-card);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.nexa-about-team-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(24,166,166,.5);
+  box-shadow: var(--blue);
+}
+
+.nexa-about-team-photo {
+  height: 310px;
+  overflow: hidden;
+  background: var(--nexa-bg-soft);
+}
+
+.nexa-about-team-photo img {
+  transition: transform .6s ease;
+}
+
+.nexa-about-team-card:hover .nexa-about-team-photo img {
+  transform: scale(1.055);
+}
+
+.nexa-about-team-info {
+  padding: 24px;
+}
+
+.nexa-about-team-info > span {
+  color: var(--green);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.nexa-about-team-info h3 {
+  margin: 10px 0 9px;
+  font-size: 1.28rem;
+  color: var(--blue);
+}
+
+.nexa-about-team-info p {
+  margin-bottom: 0;
+  color: var(--nexa-muted);
+  font-size: .88rem;
+}
+
+
+/* WHY CHOOSE NEXA SCAN */
+
+.nexa-about-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nexa-about-why-card {
+  position: relative;
+  padding: 27px 23px;
+  border: 1px solid var(--green);
+  border-radius: 17px;
+  background: var(--nexa-card);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.nexa-about-why-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue);
+  box-shadow: var(--blue);
+}
+
+.nexa-about-why-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--green);
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+.nexa-about-why-icon {
+  width: 59px;
+  height: 59px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  border-radius: 15px;
+  color: var(--blue);
+  background: rgba(22,119,200,.08);
+  transition: color .3s ease, background .3s ease;
+}
+
+.nexa-about-why-card:hover .nexa-about-why-icon {
+  color: var(--blue);
+}
+
+.nexa-about-why-icon svg {
+  width: 33px;
+  height: 33px;
+}
+
+.nexa-about-why-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.07rem;
+  color: var(--green);
+}
+
+.nexa-about-why-card p {
+  margin-bottom: 0;
+  color: var(--nexa-muted);
+  font-size: .86rem;
+  line-height: 1.8;
+}
+
+/* FINAL CTA */
+
+.nexa-about-cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-height: 420px;
+  padding-block: 95px;
+  overflow: hidden;
+  isolation: isolate;
+  color: #ffffff;
+  background: #082b43;
+  text-align: center;
+}
+
+.nexa-about-cta-bg,
+.nexa-about-cta-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.nexa-about-cta-bg {
+  background-image: url("images/about\ cta.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: transform .8s ease;
+}
+
+.nexa-about-cta:hover .nexa-about-cta-bg {
+  transform: scale(1.025);
+}
+
+.nexa-about-cta-overlay {
+  z-index: -1;
+  background: linear-gradient(100deg, rgba(4,28,47,.96), rgba(4,40,59,.84));
+}
+
+.nexa-about-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nexa-about-cta .nexa-about-kicker {
+  color: var(--blue);
+}
+
+.nexa-about-cta h2 {
+  margin-bottom: 20px;
+  font-size: clamp(1.3rem, 4.5vw, 4rem);
+  font-weight: 800;
+  color: var(--green);
+}
+
+.nexa-about-cta-content > p {
+  max-width: 650px;
+}
+
+.nexa-about-actions-center {
+  justify-content: center;
+}
+
+/* REVEAL ANIMATIONS */
+
+.nexa-about-page .nexa-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);
+}
+
+.nexa-about-page .nexa-reveal.nexa-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes nexaSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nexaHeroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.07); }
+}
+
+/* RTL SUPPORT */
+
+html[dir="rtl"] .nexa-about-page {
+  direction: rtl;
+}
+
+html[dir="rtl"] .nexa-about-hero-overlay {
+  background:
+    linear-gradient(270deg, rgba(4,26,45,.96) 0%, rgba(4,35,58,.85) 48%, rgba(4,35,58,.22) 100%),
+    linear-gradient(0deg, rgba(3,22,38,.4), transparent 45%);
+}
+
+html[dir="rtl"] .nexa-about-hero-label {
+  right: auto;
+  left: max(32px, calc((100% - 1180px) / 2));
+}
+
+html[dir="rtl"] .nexa-about-image-stack {
+  padding: 0 0 30px 26px;
+}
+
+html[dir="rtl"] .nexa-about-image-accent {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .nexa-about-image-card {
+  right: auto;
+  left: -12px;
+}
+
+html[dir="rtl"] .nexa-about-text-link:hover span {
+  transform: translateX(-5px);
+}
+
+html[dir="rtl"] .nexa-about-purpose-line {
+  background: linear-gradient(270deg, var(--nexa-blue), var(--nexa-teal));
+}
+
+html[dir="rtl"] .nexa-about-why-number {
+  right: auto;
+  left: 20px;
+}
+
+/* ==========================================
+   TRUE BLACK DARK THEME
+   Works with common html/body theme states
+========================================== */
+
+html.dark-theme .nexa-about-page,
+html.dark-mode .nexa-about-page,
+html[data-theme="dark"] .nexa-about-page,
+html[data-bs-theme="dark"] .nexa-about-page,
+body.dark-theme .nexa-about-page,
+body.dark-mode .nexa-about-page,
+body.dark .nexa-about-page,
+body[data-theme="dark"] .nexa-about-page,
+body[data-bs-theme="dark"] .nexa-about-page {
+  --nexa-text: #f1f5f9;
+  --nexa-muted: #a7b5c4;
+  --nexa-bg: #000000;
+  --nexa-bg-soft: #080808;
+  --nexa-card: #101010;
+  --nexa-border: #292929;
+  --nexa-shadow: 0 18px 55px rgba(0,0,0,.45);
+
+  color: var(--nexa-text);
+  background: #000000;
+}
+
+html.dark-theme .nexa-about-section,
+html.dark-mode .nexa-about-section,
+html[data-theme="dark"] .nexa-about-section,
+html[data-bs-theme="dark"] .nexa-about-section,
+body.dark-theme .nexa-about-section,
+body.dark-mode .nexa-about-section,
+body.dark .nexa-about-section,
+body[data-theme="dark"] .nexa-about-section,
+body[data-bs-theme="dark"] .nexa-about-section {
+  color: #f1f5f9;
+  background: #000000;
+}
+
+html.dark-theme .nexa-about-mission,
+html.dark-theme .nexa-about-commitment,
+html.dark-theme .nexa-about-why,
+html.dark-mode .nexa-about-mission,
+html.dark-mode .nexa-about-commitment,
+html.dark-mode .nexa-about-why,
+html[data-theme="dark"] .nexa-about-mission,
+html[data-theme="dark"] .nexa-about-commitment,
+html[data-theme="dark"] .nexa-about-why,
+body.dark-theme .nexa-about-mission,
+body.dark-theme .nexa-about-commitment,
+body.dark-theme .nexa-about-why,
+body.dark-mode .nexa-about-mission,
+body.dark-mode .nexa-about-commitment,
+body.dark-mode .nexa-about-why,
+body.dark .nexa-about-mission,
+body.dark .nexa-about-commitment,
+body.dark .nexa-about-why {
+  background: #000000;
+}
+
+html.dark-theme .nexa-about-purpose-card,
+html.dark-theme .nexa-about-team-card,
+html.dark-theme .nexa-about-why-card,
+html.dark-theme .nexa-about-service-strip > div,
+html.dark-theme .nexa-about-image-card,
+html.dark-theme .nexa-about-commitment-icon,
+html.dark-mode .nexa-about-purpose-card,
+html.dark-mode .nexa-about-team-card,
+html.dark-mode .nexa-about-why-card,
+html.dark-mode .nexa-about-service-strip > div,
+html.dark-mode .nexa-about-image-card,
+html.dark-mode .nexa-about-commitment-icon,
+html[data-theme="dark"] .nexa-about-purpose-card,
+html[data-theme="dark"] .nexa-about-team-card,
+html[data-theme="dark"] .nexa-about-why-card,
+html[data-theme="dark"] .nexa-about-service-strip > div,
+html[data-theme="dark"] .nexa-about-image-card,
+html[data-theme="dark"] .nexa-about-commitment-icon,
+body.dark-theme .nexa-about-purpose-card,
+body.dark-theme .nexa-about-team-card,
+body.dark-theme .nexa-about-why-card,
+body.dark-theme .nexa-about-service-strip > div,
+body.dark-theme .nexa-about-image-card,
+body.dark-theme .nexa-about-commitment-icon,
+body.dark-mode .nexa-about-purpose-card,
+body.dark-mode .nexa-about-team-card,
+body.dark-mode .nexa-about-why-card,
+body.dark-mode .nexa-about-service-strip > div,
+body.dark-mode .nexa-about-image-card,
+body.dark-mode .nexa-about-commitment-icon,
+body.dark .nexa-about-purpose-card,
+body.dark .nexa-about-team-card,
+body.dark .nexa-about-why-card,
+body.dark .nexa-about-service-strip > div,
+body.dark .nexa-about-image-card,
+body.dark .nexa-about-commitment-icon {
+  background-color: #101010;
+  border-color: var(--green);
+  color: #f1f5f9;
+}
+
+html.dark-theme .nexa-about-purpose-featured,
+html.dark-mode .nexa-about-purpose-featured,
+html[data-theme="dark"] .nexa-about-purpose-featured,
+body.dark-theme .nexa-about-purpose-featured,
+body.dark-mode .nexa-about-purpose-featured,
+body.dark .nexa-about-purpose-featured {
+  background: linear-gradient(145deg, #101b25, #101010);
+}
+
+html.dark-theme .nexa-about-purpose-card h3,
+html.dark-theme .nexa-about-team-info h3,
+html.dark-theme .nexa-about-why-card h3,
+html.dark-theme .nexa-about-commitment-list h3,
+html.dark-theme .nexa-about-image-card strong,
+html.dark-mode .nexa-about-purpose-card h3,
+html.dark-mode .nexa-about-team-info h3,
+html.dark-mode .nexa-about-why-card h3,
+html.dark-mode .nexa-about-commitment-list h3,
+html.dark-mode .nexa-about-image-card strong,
+html[data-theme="dark"] .nexa-about-purpose-card h3,
+html[data-theme="dark"] .nexa-about-team-info h3,
+html[data-theme="dark"] .nexa-about-why-card h3,
+html[data-theme="dark"] .nexa-about-commitment-list h3,
+body.dark-theme .nexa-about-purpose-card h3,
+body.dark-theme .nexa-about-team-info h3,
+body.dark-theme .nexa-about-why-card h3,
+body.dark-theme .nexa-about-commitment-list h3,
+body.dark-mode .nexa-about-purpose-card h3,
+body.dark-mode .nexa-about-team-info h3,
+body.dark-mode .nexa-about-why-card h3,
+body.dark-mode .nexa-about-commitment-list h3,
+body.dark .nexa-about-purpose-card h3,
+body.dark .nexa-about-team-info h3,
+body.dark .nexa-about-why-card h3,
+body.dark .nexa-about-commitment-list h3 {
+  color: var(--blue);
+}
+
+html.dark-theme .nexa-about-section-heading h2,
+html.dark-theme .nexa-about-copy h2,
+html.dark-theme .nexa-about-tech-content h3,
+html.dark-theme .nexa-about-why-heading h2,
+html.dark-mode .nexa-about-section-heading h2,
+html.dark-mode .nexa-about-copy h2,
+html.dark-mode .nexa-about-tech-content h3,
+html.dark-mode .nexa-about-why-heading h2,
+html[data-theme="dark"] .nexa-about-section-heading h2,
+html[data-theme="dark"] .nexa-about-copy h2,
+body.dark-theme .nexa-about-section-heading h2,
+body.dark-theme .nexa-about-copy h2,
+body.dark-mode .nexa-about-section-heading h2,
+body.dark-mode .nexa-about-copy h2,
+body.dark .nexa-about-section-heading h2,
+body.dark .nexa-about-copy h2 {
+  color: var(--green);
+}
+
+html.dark-theme .nexa-about-section-heading h2 span,
+html.dark-theme .nexa-about-copy h2 span,
+html.dark-mode .nexa-about-section-heading h2 span,
+html.dark-mode .nexa-about-copy h2 span,
+html[data-theme="dark"] .nexa-about-section-heading h2 span,
+html[data-theme="dark"] .nexa-about-copy h2 span,
+body.dark-theme .nexa-about-section-heading h2 span,
+body.dark-theme .nexa-about-copy h2 span,
+body.dark-mode .nexa-about-section-heading h2 span,
+body.dark-mode .nexa-about-copy h2 span,
+body.dark .nexa-about-section-heading h2 span,
+body.dark .nexa-about-copy h2 span {
+  color: var(--green);
+}
+
+html.dark-theme .nexa-about-image-card p,
+html.dark-theme .nexa-about-purpose-card p,
+html.dark-theme .nexa-about-team-info p,
+html.dark-theme .nexa-about-why-card p,
+html.dark-theme .nexa-about-commitment-list p,
+html.dark-theme .nexa-about-section-heading > p,
+html.dark-theme .nexa-about-copy > p,
+html.dark-theme .nexa-about-tech-heading > p,
+html.dark-theme .nexa-about-why-heading > p,
+html.dark-mode .nexa-about-image-card p,
+html.dark-mode .nexa-about-purpose-card p,
+html.dark-mode .nexa-about-team-info p,
+html.dark-mode .nexa-about-why-card p,
+html.dark-mode .nexa-about-commitment-list p,
+html.dark-mode .nexa-about-section-heading > p,
+html.dark-mode .nexa-about-copy > p,
+html.dark-mode .nexa-about-tech-heading > p,
+html.dark-mode .nexa-about-why-heading > p,
+html[data-theme="dark"] .nexa-about-section-heading > p,
+html[data-theme="dark"] .nexa-about-copy > p,
+body.dark-theme .nexa-about-section-heading > p,
+body.dark-theme .nexa-about-copy > p,
+body.dark-mode .nexa-about-section-heading > p,
+body.dark-mode .nexa-about-copy > p,
+body.dark .nexa-about-section-heading > p,
+body.dark .nexa-about-copy > p {
+  color: #a7b5c4;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .nexa-about-page *,
+  .nexa-about-page *::before,
+  .nexa-about-page *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+
+  .nexa-about-page .nexa-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+========================================== */
+
+/* Large laptops and small desktops */
+@media (max-width: 1200px) {
+  .nexa-about-container {
+    width: min(100% - 52px, 1100px);
+  }
+
+  .nexa-about-section {
+    padding-block: 90px;
+  }
+
+  .nexa-about-main-image {
+    height: 440px;
+  }
+
+  .nexa-about-purpose-card {
+    padding: 25px;
+  }
+
+  .nexa-about-team-photo {
+    height: 280px;
+  }
+
+  .nexa-about-why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 992px) {
+  .nexa-about-hero {
+    min-height: 640px;
+    min-height: 78svh;
+  }
+
+  .nexa-about-hero-overlay {
+    background: linear-gradient(90deg, rgba(4,26,45,.96), rgba(4,35,58,.72));
+  }
+
+  .nexa-about-section {
+    padding-block: 78px;
+  }
+
+  .nexa-about-two-col {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 38px;
+  }
+
+  .nexa-about-main-image {
+    height: 390px;
+  }
+
+  .nexa-about-image-card {
+    right: -5px;
+    bottom: 35px;
+    padding: 15px;
+  }
+
+  .nexa-about-purpose-grid {
+    gap: 16px;
+  }
+
+  .nexa-about-purpose-card {
+    padding: 22px;
+  }
+
+  .nexa-about-tech-heading,
+  .nexa-about-why-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nexa-about-tech-heading > p,
+  .nexa-about-why-heading > p {
+    max-width: 650px;
+  }
+
+  .nexa-about-tech-card {
+    min-height: 320px;
+  }
+
+  .nexa-about-service-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nexa-about-commitment-image {
+    min-height: 420px;
+  }
+
+  .nexa-about-team-photo {
+    height: 240px;
+  }
+
+  .nexa-about-team-info {
+    padding: 20px;
+  }
+}
+
+/* Tablets in portrait and large mobile screens */
+@media (max-width: 768px) {
+  .nexa-about-container {
+    width: calc(100% - 40px);
+  }
+
+  .nexa-about-section {
+    padding-block: 65px;
+  }
+
+  .nexa-about-hero {
+    min-height: 650px;
+    min-height: 82svh;
+  }
+
+  .nexa-about-hero-content {
+    padding-block: 90px 105px;
+  }
+
+  .nexa-about-hero h1 {
+    font-size: clamp(2.45rem, 7vw, 3.8rem);
+  }
+
+  .nexa-about-hero-label {
+    right: 20px;
+    bottom: 20px;
+    font-size: .62rem;
+  }
+
+  .nexa-about-two-col {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .nexa-about-image-stack {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .nexa-about-main-image {
+    height: 420px;
+  }
+
+  .nexa-about-copy h2,
+  .nexa-about-section-heading h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .nexa-about-purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nexa-about-purpose-card {
+    min-height: auto;
+  }
+
+  .nexa-about-purpose-top {
+    margin-bottom: 22px;
+  }
+
+  .nexa-about-purpose-card p {
+    max-width: 580px;
+  }
+
+  .nexa-about-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nexa-about-tech-card,
+  .nexa-about-tech-card.nexa-about-tech-large {
+    min-height: 360px;
+  }
+
+  .nexa-about-commitment-image {
+    min-height: 430px;
+  }
+
+  .nexa-about-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nexa-about-team-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 12px);
+    justify-self: center;
+  }
+
+  .nexa-about-team-photo {
+    height: 270px;
+  }
+
+  .nexa-about-cta {
+    min-height: 420px;
+    padding-block: 75px;
+  }
+
+  html[dir="rtl"] .nexa-about-hero-label {
+    left: 20px;
+    right: auto;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .nexa-about-container {
+    width: calc(100% - 32px);
+  }
+
+  .nexa-about-section {
+    padding-block: 54px;
+  }
+
+  .nexa-about-hero {
+    min-height: 620px;
+    min-height: 84svh;
+  }
+
+  .nexa-about-hero-bg {
+    background-position: 62% center;
+  }
+
+  .nexa-about-hero-overlay {
+    background: linear-gradient(90deg, rgba(4,26,45,.95), rgba(4,35,58,.77));
+  }
+
+  .nexa-about-hero-content {
+    padding-block: 75px 90px;
+  }
+
+  .nexa-about-eyebrow {
+    margin-bottom: 19px;
+    font-size: .68rem;
+  }
+
+  .nexa-about-hero h1 {
+    font-size: clamp(2.15rem, 9vw, 3.15rem);
+    line-height: 1.12;
+  }
+
+  .nexa-about-hero-content > p,
+  .nexa-about-cta-content > p {
+    font-size: .92rem;
+    line-height: 1.8;
+  }
+
+  .nexa-about-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nexa-about-btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 16px;
+    font-size: .86rem;
+  }
+
+  .nexa-about-hero-note {
+    align-items: flex-start;
+    font-size: .78rem;
+  }
+
+  .nexa-about-hero-label {
+    max-width: calc(100% - 32px);
+    font-size: .55rem;
+    letter-spacing: .08em;
+  }
+
+  .nexa-about-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .nexa-about-section-heading h2,
+  .nexa-about-copy h2 {
+    font-size: clamp(1.9rem, 8vw, 2.55rem);
+  }
+
+  .nexa-about-section-heading > p,
+  .nexa-about-copy > p {
+    font-size: .92rem;
+  }
+
+  .nexa-about-image-stack {
+    padding: 0 13px 20px 0;
+  }
+
+  .nexa-about-main-image {
+    height: 320px;
+    border-radius: 17px;
+  }
+
+  .nexa-about-image-accent {
+    border-radius: 17px;
+  }
+
+  .nexa-about-image-card {
+    right: -3px;
+    bottom: 27px;
+    gap: 10px;
+    max-width: 235px;
+    padding: 12px;
+  }
+
+  .nexa-about-card-icon {
+    width: 35px;
+    height: 35px;
+    flex-basis: 35px;
+    font-size: 1.4rem;
+  }
+
+  .nexa-about-image-card strong {
+    font-size: .78rem;
+  }
+
+  .nexa-about-image-card p {
+    font-size: .69rem;
+  }
+
+  .nexa-about-purpose-card {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .nexa-about-purpose-top {
+    margin-bottom: 18px;
+  }
+
+  .nexa-about-purpose-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .nexa-about-purpose-card p {
+    font-size: .87rem;
+  }
+
+  .nexa-about-tech-heading,
+  .nexa-about-why-heading {
+    margin-bottom: 28px;
+  }
+
+  .nexa-about-tech-card,
+  .nexa-about-tech-card.nexa-about-tech-large {
+    min-height: 320px;
+    border-radius: 17px;
+  }
+
+  .nexa-about-tech-content {
+    padding: 22px;
+  }
+
+  .nexa-about-tech-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .nexa-about-tech-content p {
+    font-size: .82rem;
+  }
+
+  .nexa-about-service-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .nexa-about-service-strip > div {
+    min-height: 58px;
+    gap: 9px;
+    padding: 12px;
+    font-size: .78rem;
+  }
+
+  .nexa-about-commitment-list {
+    gap: 20px;
+  }
+
+  .nexa-about-commitment-list article {
+    gap: 12px;
+  }
+
+  .nexa-about-commitment-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .nexa-about-commitment-list h3 {
+    font-size: 1rem;
+  }
+
+  .nexa-about-commitment-list p {
+    font-size: .83rem;
+  }
+
+  .nexa-about-commitment-image {
+    min-height: 330px;
+    border-radius: 17px;
+  }
+
+  .nexa-about-image-caption {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 14px;
+  }
+
+  .nexa-about-team-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .nexa-about-team-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .nexa-about-team-photo {
+    height: 320px;
+  }
+
+  .nexa-about-team-info {
+    padding: 21px;
+  }
+
+  .nexa-about-why-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .nexa-about-why-card {
+    padding: 23px;
+  }
+
+  .nexa-about-why-icon {
+    margin-bottom: 19px;
+  }
+
+  .nexa-about-cta {
+    min-height: 440px;
+    padding-block: 65px;
+  }
+
+  .nexa-about-cta h2 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+  }
+
+  html[dir="rtl"] .nexa-about-image-stack {
+    padding: 0 0 20px 13px;
+  }
+
+  html[dir="rtl"] .nexa-about-image-card {
+    left: -3px;
+    right: auto;
+  }
+}
+
+/* Small phones: 360px and below */
+@media (max-width: 380px) {
+  .nexa-about-container {
+    width: calc(100% - 26px);
+  }
+
+  .nexa-about-section {
+    padding-block: 45px;
+  }
+
+  .nexa-about-hero {
+    min-height: 600px;
+  }
+
+  .nexa-about-hero h1 {
+    font-size: 2.05rem;
+  }
+
+  .nexa-about-hero-note {
+    font-size: .72rem;
+  }
+
+  .nexa-about-hero-label {
+    right: 13px;
+    font-size: .5rem;
+  }
+
+  .nexa-about-section-heading h2,
+  .nexa-about-copy h2 {
+    font-size: 1.85rem;
+  }
+
+  .nexa-about-main-image {
+    height: 280px;
+  }
+
+  .nexa-about-image-card {
+    max-width: 215px;
+    padding: 10px;
+  }
+
+  .nexa-about-service-strip > div {
+    font-size: .73rem;
+    padding: 10px 8px;
+  }
+
+  .nexa-about-tech-card,
+  .nexa-about-tech-card.nexa-about-tech-large {
+    min-height: 300px;
+  }
+
+  .nexa-about-team-photo {
+    height: 280px;
+  }
+
+  .nexa-about-why-card {
+    padding: 20px;
+  }
+
+  html[dir="rtl"] .nexa-about-hero-label {
+    left: 13px;
+    right: auto;
+  }
+}

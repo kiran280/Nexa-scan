@@ -1,0 +1,1453 @@
+   
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>nexascan | CT Scan</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="service-detail.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+      <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+ 
+<header class="site-header">
+ 
+    <div class="header-container">
+ 
+ 
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="AquaScape Home"
+>
+ 
+            <div class="brand-logo">
+ 
+                <img
+                    src="images/logo.png"
+                    alt="Nexa Scan"
+>
+ 
+            </div>
+ 
+            <div class="brand-content">
+ 
+                <div class="brand-name">
+ 
+                    <span class="aqua">
+                        Nexa
+</span>
+ 
+                    <span class="scape">
+                        Scan
+</span>
+ 
+                </div>
+ 
+                <span class="brand-tagline">
+                    Advanced Imaging.
+</span>
+ 
+            </div>
+ 
+        </a>
+ 
+ 
+ 
+        <nav
+            class="main-nav"
+            id="mainNav"
+            aria-label="Primary navigation"
+>
+ 
+ 
+            <div class="nav-item home-dropdown">
+ 
+                <a
+                    href="index.html"
+                    class="nav-link"
+>
+ 
+                    Home
+ 
+                    <span class="dropdown-arrow"></span>
+ 
+                </a>
+ 
+                <div class="dropdown-menu">
+ 
+                    <a href="index.html">
+                        Home 1
+</a>
+ 
+                    <a href="home2.html">
+                        Home 2
+</a>
+ 
+                </div>
+ 
+            </div>
+ 
+ 
+ 
+            <div class="nav-item">
+ 
+                <a
+                    href="about.html"
+                    class="nav-link"
+>
+                    About
+</a>
+ 
+            </div>
+ 
+ 
+ 
+            <div class="nav-item">
+ 
+                <a
+                    href="services.html"
+                    class="nav-link"
+>
+                    Services
+</a>
+ 
+            </div>
+ 
+ 
+ 
+            <div class="nav-item">
+ 
+                <a
+                    href="blog.html"
+                    class="nav-link"
+>
+                    Blog
+</a>
+ 
+            </div>
+ 
+ 
+ 
+            <div class="nav-item">
+ 
+                <a
+                    href="scan-preparation.html"
+                    class="nav-link"
+>
+                    Scan Preparation
+</a>
+ 
+            </div>
+ 
+ 
+ 
+            <div class="nav-item">
+ 
+                <a
+                    href="contact.html"
+                    class="nav-link"
+>
+                    Contact
+</a>
+ 
+            </div>
+ 
+        </nav>
+ 
+ 
+ 
+        <div class="header-actions">
+ 
+ 
+            <button
+                type="button"
+                class="icon-button"
+                id="directionBtn"
+                title="Toggle RTL / LTR"
+                aria-label="Toggle RTL / LTR"
+>
+ 
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+>
+ 
+                    <path d="M4 7h15"></path>
+<path d="M4 7l3-3"></path>
+<path d="M4 7l3 3"></path>
+<path d="M20 17H5"></path>
+<path d="M20 17l-3-3"></path>
+<path d="M20 17l-3 3"></path>
+ 
+                </svg>
+ 
+            </button>
+ 
+ 
+ 
+            <button
+                type="button"
+                class="icon-button"
+                id="themeBtn"
+                title="Toggle Dark / Light Mode"
+                aria-label="Toggle Dark / Light Mode"
+>
+ 
+                <svg
+                    class="sun-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+>
+ 
+                    <circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2"></path>
+<path d="M12 20v2"></path>
+<path d="M4.93 4.93l1.41 1.41"></path>
+<path d="M17.66 17.66l1.41 1.41"></path>
+<path d="M2 12h2"></path>
+<path d="M20 12h2"></path>
+<path d="M4.93 19.07l1.41-1.41"></path>
+<path d="M17.66 6.34l1.41-1.41"></path>
+ 
+                </svg>
+ 
+                <svg
+                    class="moon-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+>
+ 
+                    <path d="M21 12.8A9 9 0 1 1 11.2 3A7 7 0 0 0 21 12.8Z"></path>
+ 
+                </svg>
+ 
+            </button>
+ 
+ 
+ 
+            <a
+                href="appointment.html"
+                class="login-btn"
+>
+                Appointment
+</a>
+ 
+ 
+ 
+            <button
+                type="button"
+                class="menu-button"
+                id="menuBtn"
+                aria-label="Open Menu"
+>
+ 
+                <span></span>
+<span></span>
+<span></span>
+ 
+            </button>
+ 
+        </div>
+ 
+    </div>
+ 
+</header>
+   
+   
+   
+   
+<!-- =========================================
+     NEXA SCAN — CT SCAN SERVICE DETAILS
+     Shared CSS: service-detail.css
+========================================= -->
+
+<main class="nx-service-page">
+
+  <!-- 01. HERO -->
+  <section class="nx-hero nx-section">
+    <div class="nx-container nx-hero-grid">
+
+      <div class="nx-hero-content nx-reveal">
+        <span class="nx-eyebrow">ADVANCED CT IMAGING</span>
+
+        <h1>See More Clearly with <span>CT Scan</span></h1>
+
+        <p>
+          Discover detailed cross-sectional imaging with computed
+          tomography. Our patient-focused approach helps you understand
+          the process and feel prepared for your examination.
+        </p>
+
+        <div class="nx-hero-actions">
+          <a href="appointment.html" class="nx-btn nx-btn-primary">
+            Book a CT Scan <span>↗</span>
+          </a>
+          <a href="#ct-overview" class="nx-btn nx-btn-outline">
+            Explore CT Imaging
+          </a>
+        </div>
+
+        <div class="nx-trust-row">
+          <div><strong>01</strong><span>Detailed cross-sections</span></div>
+          <div><strong>02</strong><span>Guided examination</span></div>
+          <div><strong>03</strong><span>Patient support</span></div>
+        </div>
+      </div>
+
+      <div class="nx-hero-visual nx-reveal">
+        <img
+          src="images/serdetail ct hero.jpg"
+          alt="Modern diagnostic imaging environment">
+
+
+        <div class="nx-hero-orbit"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 02. QUICK FACTS -->
+  <section class="nx-facts nx-section">
+    <div class="nx-container nx-facts-grid">
+
+      <div class="nx-fact">
+        <span class="nx-fact-icon">◈</span>
+        <div>
+          <strong>Cross-Sectional Views</strong>
+          <small>Detailed internal structures</small>
+        </div>
+      </div>
+
+      <div class="nx-fact">
+        <span class="nx-fact-icon">◎</span>
+        <div>
+          <strong>Guided Process</strong>
+          <small>Clear patient instructions</small>
+        </div>
+      </div>
+
+      <div class="nx-fact">
+        <span class="nx-fact-icon">✳</span>
+        <div>
+          <strong>Modern Technology</strong>
+          <small>Computer-assisted imaging</small>
+        </div>
+      </div>
+
+      <div class="nx-fact">
+        <span class="nx-fact-icon">✓</span>
+        <div>
+          <strong>Clinical Review</strong>
+          <small>Results shared appropriately</small>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 03. CT OVERVIEW -->
+  <section class="nx-overview nx-section" id="ct-overview">
+    <div class="nx-container">
+
+      <div class="nx-section-heading nx-reveal">
+        <span class="nx-eyebrow">CT SCAN OVERVIEW</span>
+        <h2>Detailed Views of the <span>Inside</span></h2>
+        <p>
+          A CT scan combines X-ray images taken from different angles
+          to create cross-sectional views of the body.
+        </p>
+      </div>
+
+      <div class="nx-overview-grid">
+
+        <article class="nx-card nx-overview-card nx-reveal">
+          <span class="nx-card-number">01</span>
+          <div class="nx-card-icon">⌕</div>
+          <h3>Detailed Imaging</h3>
+          <p>
+            CT imaging can help clinicians assess internal organs,
+            bones, blood vessels and other structures when indicated.
+          </p>
+        </article>
+
+        <article class="nx-card nx-overview-card nx-reveal">
+          <span class="nx-card-number">02</span>
+          <div class="nx-card-icon">◉</div>
+          <h3>Efficient Examination</h3>
+          <p>
+            Many CT examinations can be completed quickly. The duration
+            depends on the body area and the scan protocol.
+          </p>
+        </article>
+
+        <article class="nx-card nx-overview-card nx-reveal">
+          <span class="nx-card-number">03</span>
+          <div class="nx-card-icon">⌁</div>
+          <h3>Clinically Guided</h3>
+          <p>
+            Your clinician selects the examination based on your
+            symptoms, medical history and diagnostic needs.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 04. AREAS WE EXAMINE -->
+  <section class="nx-body-areas nx-section">
+    <div class="nx-container">
+
+      <div class="nx-section-heading nx-reveal">
+        <span class="nx-eyebrow">AREAS WE EXAMINE</span>
+        <h2>Imaging for Different <span>Body Areas</span></h2>
+        <p>
+          CT examinations may be requested for different parts of the
+          body depending on the clinical question.
+        </p>
+      </div>
+
+      <div class="nx-area-grid">
+
+        <article class="nx-area-card nx-reveal">
+          <img
+            src="images/serdetail ct brain.jpg"
+            alt="Neurological health and brain imaging concept">
+          <div class="nx-area-overlay">
+            <span>01</span>
+            <h3>Head & Brain</h3>
+            <p>
+              Imaging to help investigate selected neurological
+              symptoms and head injuries.
+            </p>
+          </div>
+        </article>
+
+        <article class="nx-area-card nx-reveal">
+          <img
+            src="images/serdetail ct chest.jpg"
+            alt="Medical professional providing diagnostic care">
+          <div class="nx-area-overlay">
+            <span>02</span>
+            <h3>Chest</h3>
+            <p>
+              Detailed views of the lungs, chest structures and
+              surrounding anatomy when indicated.
+            </p>
+          </div>
+        </article>
+
+        <article class="nx-area-card nx-reveal">
+          <img
+            src="images/serdetail ct abdominal.jpg"
+            alt="Diagnostic medical examination environment">
+          <div class="nx-area-overlay">
+            <span>03</span>
+            <h3>Abdomen & Pelvis</h3>
+            <p>
+              Imaging of abdominal and pelvic structures as directed
+              by the referring clinician.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="nx-note">
+        The appropriate scan and body area are determined by your
+        referring clinician and the imaging team.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- 05. TECHNOLOGY -->
+  <section class="nx-technology nx-section">
+    <div class="nx-container nx-technology-grid">
+
+      <div class="nx-technology-image nx-reveal">
+        <img
+          src="images/serdetail ct precision.jpg"
+          alt="Medical diagnostic imaging facility">
+
+      </div>
+
+      <div class="nx-technology-content nx-reveal">
+        <span class="nx-eyebrow">CT TECHNOLOGY</span>
+        <h2>Precision Imaging.<br><span>Thoughtful Care.</span></h2>
+        <p>
+          The scan protocol, image acquisition and clinical review
+          are selected according to the examination requested.
+        </p>
+
+        <div class="nx-tech-list">
+
+          <div>
+            <span>01</span>
+            <div>
+              <h3>Cross-Sectional Imaging</h3>
+              <p>
+                Computer processing combines X-ray measurements
+                into detailed cross-sectional images.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <span>02</span>
+            <div>
+              <h3>Protocol Selection</h3>
+              <p>
+                The imaging team follows the appropriate protocol
+                for the requested body area.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <span>03</span>
+            <div>
+              <h3>Clinical Reporting</h3>
+              <p>
+                The resulting images are reviewed through the
+                appropriate diagnostic reporting process.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 06. PATIENT JOURNEY -->
+  <section class="nx-journey nx-section">
+    <div class="nx-container">
+
+      <div class="nx-section-heading nx-reveal">
+        <span class="nx-eyebrow">YOUR SCAN JOURNEY</span>
+        <h2>Four Steps to a <span>Smoother Visit</span></h2>
+        <p>
+          Understanding the process can help you prepare for your
+          CT scan appointment.
+        </p>
+      </div>
+
+      <div class="nx-journey-grid">
+
+        <article class="nx-journey-card nx-reveal">
+          <span>01</span>
+          <h3>Appointment</h3>
+          <p>
+            Arrange your scan and bring your referral and relevant
+            medical information.
+          </p>
+        </article>
+
+        <article class="nx-journey-card nx-reveal">
+          <span>02</span>
+          <h3>Preparation</h3>
+          <p>
+            Follow the instructions provided. Some scans require
+            specific preparation or contrast-related checks.
+          </p>
+        </article>
+
+        <article class="nx-journey-card nx-reveal">
+          <span>03</span>
+          <h3>Scanning</h3>
+          <p>
+            You will be positioned on the scanner table and guided
+            through the examination.
+          </p>
+        </article>
+
+        <article class="nx-journey-card nx-reveal">
+          <span>04</span>
+          <h3>Results</h3>
+          <p>
+            Your images are reviewed and the report is shared
+            through the centre's clinical process.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 07. SAFETY & PREPARATION -->
+  <section class="nx-safety nx-section">
+    <div class="nx-container nx-safety-grid">
+
+      <div class="nx-safety-content nx-reveal">
+        <span class="nx-eyebrow"> SAFETY & PREPARATION</span>
+        <h2>Your Safety Comes <span>First</span></h2>
+        <p>
+          CT uses X-rays. Your imaging team will determine whether
+          the examination is appropriate and explain any preparation
+          or precautions that apply to you.
+        </p>
+
+        <ul class="nx-safety-list">
+          <li>
+            <span>✓</span>
+            Tell the team if you may be pregnant.
+          </li>
+          <li>
+            <span>✓</span>
+            Share relevant medical history and current medications.
+          </li>
+          <li>
+            <span>✓</span>
+            Mention allergies or previous reactions to contrast material.
+          </li>
+          <li>
+            <span>✓</span>
+            Follow any fasting or other instructions given for your scan.
+          </li>
+        </ul>
+
+        <p class="nx-safety-disclaimer">
+          CT uses ionizing radiation. Contrast material is needed
+          for some, but not all, examinations. Follow the specific
+          advice provided by your healthcare team.
+        </p>
+      </div>
+
+      <div class="nx-safety-visual nx-reveal">
+        <img
+          src="images/serdetail ct prep.jpg"
+          alt="Healthcare professional supporting patient care">
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 08. FAQ -->
+  <section class="nx-faq nx-section">
+    <div class="nx-container nx-faq-layout">
+
+      <div class="nx-faq-intro nx-reveal">
+        <span class="nx-eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+        <h2>Questions About <span>CT Scans?</span></h2>
+        <p>
+          Find answers to common questions before your appointment.
+        </p>
+        <a href="appointment.html" class="nx-btn nx-btn-primary">
+          Book Your Scan <span>↗</span>
+        </a>
+      </div>
+
+      <div class="nx-faq-list nx-reveal">
+
+        <details class="nx-faq-item">
+          <summary>What is a CT scan?<span class="nx-faq-plus"></span></summary>
+          <p>
+            A CT scan uses X-rays and computer processing to produce
+            cross-sectional images of structures inside the body.
+          </p>
+        </details>
+
+        <details class="nx-faq-item">
+          <summary>Does a CT scan use radiation?<span class="nx-faq-plus"></span></summary>
+          <p>
+            Yes. CT uses ionizing radiation. Your healthcare team
+            considers the clinical need and appropriate scan protocol.
+          </p>
+        </details>
+
+        <details class="nx-faq-item">
+          <summary>Do I need to fast before a CT scan?<span class="nx-faq-plus"></span></summary>
+          <p>
+            Not every CT scan requires fasting. Requirements depend
+            on the examination and whether contrast material is planned.
+            Follow your appointment instructions.
+          </p>
+        </details>
+
+        <details class="nx-faq-item">
+          <summary>Will I need contrast material?<span class="nx-faq-plus"></span></summary>
+          <p>
+            Some CT examinations use contrast material to help show
+            certain structures. Your imaging team will explain whether
+            it is needed and check relevant safety information.
+          </p>
+        </details>
+
+        <details class="nx-faq-item">
+          <summary>When will I receive my report?<span class="nx-faq-plus"></span></summary>
+          <p>
+            Reporting times vary by examination and clinical workflow.
+            Contact your imaging centre for the expected timeframe.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 09. CTA -->
+  <section class="nx-cta nx-section">
+    <div class="nx-container">
+
+      <div class="nx-cta-panel nx-reveal">
+        <div class="nx-cta-glow"></div>
+
+        <div class="nx-cta-content">
+          <span class="nx-eyebrow">YOUR HEALTH, OUR PRIORITY</span>
+          <h2>Take the Next Step Toward <span>Clearer Answers.</span></h2>
+          <p>
+            Contact Nexa Scan to discuss your CT appointment,
+            preparation requirements and what to expect.
+          </p>
+
+          <div class="nx-hero-actions">
+            <a href="appointment.html" class="nx-btn nx-btn-primary">
+              Request an Appointment <span>↗</span>
+            </a>
+            <a href="contact.html" class="nx-btn nx-btn-outline">
+              Contact Our Team
+            </a>
+          </div>
+        </div>
+
+        <div class="nx-cta-mark">N<span>S</span></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+
+
+   
+   
+   
+   
+   
+   <footer class="site-footer">
+
+
+        <div class="footer-container">
+
+
+
+<div class="footer-brand">
+
+    <a
+        href="index.html"
+        class="footer-brand-link"
+    >
+
+        <div class="footer-brand-logo">
+
+            <img
+                src="images/logo.png"
+                alt="AquaScape Logo"
+            >
+
+        </div>
+
+
+        <div class="footer-brand-content">
+
+            <div class="footer-brand-name">
+
+                <span class="aqua">
+                    Nexa
+                </span>
+
+                <span class="scape">
+                    Scan
+                </span>
+
+            </div>
+
+            <span class="footer-brand-tagline">
+                Advanced Imaging.
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <p>
+       NexaScan provides trusted diagnostic imaging 
+       with advanced technology and compassionate 
+       care. Your health and comfort are our priority.
+    </p>
+
+
+
+                <div class="social-icons">
+
+
+
+                    <a
+                        href="https://www.facebook.com/"
+                        class="social-icon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        title="Facebook"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+
+                            <path
+                                d="M14 8h3V4h-3
+                                c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9
+                                c0-1 .3-1 1-1z"
+                            ></path>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <a
+                        href="https://www.instagram.com/"
+                        class="social-icon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        title="Instagram"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="18"
+                                height="18"
+                                rx="5"
+                            ></rect>
+
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="4"
+                            ></circle>
+
+                            <circle
+                                cx="17.5"
+                                cy="6.5"
+                                r="1"
+                                fill="currentColor"
+                                stroke="none"
+                            ></circle>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <a
+                        href="https://x.com/"
+                        class="social-icon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X"
+                        title="X"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+
+                            <path
+                                d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.85L18.9 2zm-1.1 17.9h1.73L8.28 3.98H6.43L17.8 19.9z"
+                            ></path>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        class="social-icon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        title="LinkedIn"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+
+                            <path
+                                d="M6.5 8.5H3V21h3.5V8.5zM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3zM21 13.85c0-3.77-2.01-5.52-4.69-5.52-2.16 0-3.13 1.19-3.67 2.02V8.5H9.15V21h3.49v-6.19c0-1.63.31-3.21 2.33-3.21 1.99 0 2.02 1.86 2.02 3.31V21H21v-7.15z"
+                            ></path>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <a
+                        href="https://www.youtube.com/"
+                        class="social-icon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube"
+                        title="YouTube"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+
+                            <path
+                                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.8V8.2l6.4 3.8-6.4 3.8z"
+                            ></path>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+
+                <a href="services.html">
+                    Services
+                </a>
+
+
+                <a href="scan-preparation.html">
+                    Scan Preparation
+                </a>
+
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Our Services
+                </h3>
+
+
+                <a href="services.html">
+                    MRI Scan
+                </a>
+
+
+                <a href="services.html">
+                    CT Scan
+                </a>
+
+
+                <a href="services.html">
+                    Ultrasound Scan
+                </a>
+
+
+                <a href="services.html">
+                    X-Ray Imaging
+                </a>
+
+                 <a href="services.html">
+                    PET-CT Scan
+                </a>
+
+
+                 
+            </div>
+
+
+
+
+            <div
+                class="footer-column contact-column"
+            >
+
+                <h3>
+                    Contact Us
+                </h3>
+
+
+                <div class="contact-info">
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+
+                                <path
+                                    d="M22 16.92v3
+                                    a2 2 0 0 1-2.18 2
+                                    19.79 19.79 0 0 1-8.63-3.07
+                                    19.5 19.5 0 0 1-6-6
+                                    A19.79 19.79 0 0 1 2.12 4.18
+                                    A2 2 0 0 1 4.11 2h3
+                                    a2 2 0 0 1 2 1.72
+                                    12.84 12.84 0 0 0 .7 2.81
+                                    2 2 0 0 1-.45 2.11L8.09 9.91
+                                    a16 16 0 0 0 6 6l1.27-1.27
+                                    a2 2 0 0 1 2.11-.45
+                                    12.84 12.84 0 0 0 2.81.7
+                                    A2 2 0 0 1 22 16.92z"
+                                ></path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="contact-text">
+
+                            <a href="tel:+910000000000">
+                                +91 00000 00000
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+
+                                <rect
+                                    x="3"
+                                    y="5"
+                                    width="18"
+                                    height="14"
+                                    rx="2"
+                                ></rect>
+
+                                <polyline
+                                    points="3,7 12,13 21,7"
+                                ></polyline>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="contact-text">
+
+                            <a
+                                href="mailto:info@aquascape.com"
+                            >
+                                info@nexascan.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+
+                                <path
+                                    d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+                                ></path>
+
+                                <circle
+                                    cx="12"
+                                    cy="10"
+                                    r="3"
+                                ></circle>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="contact-text">
+
+                            Hyderabad, India
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="9"
+                                ></circle>
+
+                                <polyline
+                                    points="12,7 12,12 15,15"
+                                ></polyline>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="contact-text">
+
+                            Mon - Sat: 9:00 AM - 6:00 PM
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="footer-bottom">
+
+
+            <div class="copyright">
+
+                &copy; 2026 nexascan.
+                All Rights Reserved.
+
+            </div>
+
+
+            <div class="legal-links">
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+
+                <a href="terms.html">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+
+
+    <script>
+
+
+ 
+const body = document.body;
+const themeBtn = document.getElementById("themeBtn");
+const directionBtn = document.getElementById("directionBtn");
+const menuBtn = document.getElementById("menuBtn");
+const mainNav = document.getElementById("mainNav");
+ 
+ 
+ 
+const savedTheme = localStorage.getItem("aquascape-theme");
+ 
+if (savedTheme === "dark") {
+    body.classList.add("dark");
+}
+ 
+ 
+ 
+themeBtn.addEventListener("click", function () {
+    body.classList.toggle("dark");
+ 
+    if (body.classList.contains("dark")) {
+        localStorage.setItem("aquascape-theme", "dark");
+    } else {
+        localStorage.setItem("aquascape-theme", "light");
+    }
+});
+ 
+ 
+ 
+const savedDirection = localStorage.getItem("aquascape-direction");
+ 
+if (savedDirection === "rtl") {
+    document.documentElement.dir = "rtl";
+} else {
+    document.documentElement.dir = "ltr";
+}
+ 
+ 
+ 
+directionBtn.addEventListener("click", function () {
+    if (document.documentElement.dir === "ltr") {
+        document.documentElement.dir = "rtl";
+        localStorage.setItem("aquascape-direction", "rtl");
+    } else {
+        document.documentElement.dir = "ltr";
+        localStorage.setItem("aquascape-direction", "ltr");
+    }
+});
+ 
+ 
+ 
+menuBtn.addEventListener("click", function () {
+    mainNav.classList.toggle("show");
+});
+ 
+ 
+ 
+document.querySelectorAll(".main-nav a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        if (window.innerWidth <= 850) {
+            const isDropdownParent = link.closest(".home-dropdown");
+ 
+            if (!isDropdownParent || link.closest(".dropdown-menu")) {
+                mainNav.classList.remove("show");
+            }
+        }
+    });
+});
+ 
+ 
+ 
+function normalizePath(path) {
+    return path
+        .toLowerCase()
+        .replace(/\/+$/, "")
+        .replace(/\.html$/, "");
+}
+ 
+const currentPath = normalizePath(window.location.pathname);
+ 
+document
+    .querySelectorAll(".nav-link, .dropdown-menu a")
+    .forEach(function (link) {
+        link.classList.remove("active");
+        link.removeAttribute("aria-current");
+    });
+ 
+document
+    .querySelectorAll(".nav-link, .dropdown-menu a")
+    .forEach(function (link) {
+        const href = link.getAttribute("href");
+ 
+        if (!href || href.startsWith("#")) {
+            return;
+        }
+ 
+        const linkPath = normalizePath(
+            new URL(href, window.location.href).pathname
+        );
+ 
+        if (linkPath === currentPath) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+        }
+    });
+ 
+ 
+ 
+const homeDropdown = document.querySelector(".home-dropdown");
+ 
+if (homeDropdown) {
+    const homeParentLink = homeDropdown.querySelector(":scope > .nav-link");
+    const activeDropdownLink = homeDropdown.querySelector(
+        ".dropdown-menu a.active"
+    );
+ 
+    if (homeParentLink && activeDropdownLink) {
+        homeParentLink.classList.add("active");
+        homeParentLink.setAttribute("aria-current", "page");
+    }
+}
+ 
+lucide.createIcons();
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navItems = document.querySelectorAll(".nav-item");
+
+    navItems.forEach(function (item) {
+
+        const link = item.querySelector(":scope > .nav-link");
+        const dropdown = item.querySelector(":scope > .dropdown-menu");
+
+        if (!link || !dropdown) {
+            return;
+        }
+
+        link.addEventListener("click", function (event) {
+
+            if (window.innerWidth <= 1024) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                navItems.forEach(function (otherItem) {
+
+                    if (otherItem !== item) {
+                        otherItem.classList.remove("open");
+                    }
+
+                });
+
+                item.classList.toggle("open");
+            }
+
+        });
+
+    });
+
+
+    document.addEventListener("click", function (event) {
+
+        if (!event.target.closest(".nav-item")) {
+
+            navItems.forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+        }
+
+    });
+
+
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 1024) {
+
+            navItems.forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+        }
+
+    });
+
+});
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

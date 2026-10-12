@@ -1,0 +1,1842 @@
+
+/* ================= NEXASCAN HERO BANNER ================= */
+
+.nx-hero {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    padding: 10px 6%;
+    overflow: hidden;
+    background: #F5FAFE;
+    color: var(--blue-light);
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+}
+
+.nx-hero *,
+.nx-hero *::before,
+.nx-hero *::after {
+    box-sizing: border-box;
+}
+
+.nx-hero-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/* LEFT CONTENT */
+
+.nx-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.nx-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    color: #0869B5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+
+.nx-hero h1 {
+    margin: 0 0 25px;
+    color: var(--green);
+    font-size: clamp(28px, 4.1vw, 54px);
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -1.8px;
+}
+
+.nx-hero h1 span {
+    display: block;
+    margin-top: 8px;
+    color: #0869B5;
+}
+
+.nx-hero-description {
+    max-width: 570px;
+    color: #617589;
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* BUTTONS */
+
+.nx-hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 38px;
+}
+
+.nx-primary-btn,
+.nx-secondary-btn {
+    min-height: 54px;
+    padding: 0 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.nx-primary-btn {
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--green)
+    );
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(8, 105, 181, 0.16);
+}
+
+.nx-primary-btn:hover {
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(8, 105, 181, 0.23);
+}
+
+.nx-secondary-btn {
+    color: grey;
+    border: 1px solid var(--green);
+}
+
+.nx-secondary-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    transform: translateY(-3px);
+}
+
+.nx-primary-btn svg,
+.nx-secondary-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.nx-primary-btn .nx-btn-arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+}
+
+/* BENEFITS */
+
+.nx-benefits {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 23px;
+}
+
+.nx-benefit {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #53697B;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nx-benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #10A889;
+}
+
+.nx-benefit-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* RIGHT VISUAL */
+
+.nx-hero-visual {
+    position: relative;
+    min-width: 0;
+    padding: 18px 12px 30px 25px;
+}
+
+.nx-image-frame {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 475px;
+    overflow: hidden;
+    border: 8px solid #FFFFFF;
+    border-radius: 22px;
+    background: #E8F4FC;
+    box-shadow: 0 25px 65px rgba(24, 69, 101, 0.14);
+}
+
+.nx-hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.nx-image-overlay {
+    position: absolute;
+    inset: 40% 0 0;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(5, 26, 43, 0.72)
+    );
+    pointer-events: none;
+}
+
+.nx-image-caption {
+    position: absolute;
+    z-index: 2;
+    left: 24px;
+    right: 24px;
+    bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #FFFFFF;
+}
+
+.nx-image-caption strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.nx-image-caption small {
+    display: block;
+    color: #E3EDF5;
+    font-size: 12px;
+}
+
+/* DECORATIVE SHAPES */
+
+.nx-image-decoration {
+    position: absolute;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.nx-decoration-one {
+    top: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+    background: #10A889;
+    opacity: 0.15;
+}
+
+.nx-decoration-two {
+    bottom: 0;
+    left: 0;
+    width: 155px;
+    height: 155px;
+    background: #0869B5;
+    opacity: 0.12;
+}
+
+/* FLOATING CARD */
+
+.nx-floating-card {
+    position: absolute;
+    z-index: 3;
+    right: -12px;
+    bottom: 55px;
+    max-width: calc(100% - 15px);
+    min-width: 245px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #FFFFFF;
+    color: #17344D;
+    border: 1px solid #E2EDF4;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(16, 52, 78, 0.16);
+}
+
+.nx-floating-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #E4F8F2;
+    color: #087F68;
+}
+
+.nx-floating-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.nx-floating-text {
+    min-width: 0;
+    flex: 1;
+}
+
+.nx-floating-text strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.nx-floating-text small {
+    display: block;
+    color: #718396;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.nx-floating-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    min-width: 23px;
+    border-radius: 50%;
+    background: #E4F8F2;
+    color: #087F68;
+}
+
+.nx-floating-check svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================
+   NEXASCAN COMPLETE HERO DARK THEME
+   Entire hero section: PURE BLACK
+========================================== */
+
+/* Main hero background */
+html[data-theme="dark"] .nx-hero,
+html[data-theme="dark"] .nx-hero-container,
+html[data-theme="dark"] .nx-hero-content,
+html[data-theme="dark"] .nx-hero-visual {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Hero heading */
+html[data-theme="dark"] .nx-hero h1 {
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .nx-hero h1 span {
+    color: #39bde9 !important;
+}
+
+/* Description */
+html[data-theme="dark"] .nx-hero-description {
+    color: #d0d0d0 !important;
+}
+
+/* Eyebrow label */
+html[data-theme="dark"] .nx-eyebrow {
+    background: #000000 !important;
+    color: #55d8bb !important;
+    border: 1px solid #333333 !important;
+    box-shadow: none !important;
+}
+
+/* Benefit labels */
+html[data-theme="dark"] .nx-benefit {
+    color: #e0e0e0 !important;
+}
+
+html[data-theme="dark"] .nx-benefit-icon {
+    color: #10a889 !important;
+}
+
+/* Primary button */
+html[data-theme="dark"] .nx-primary-btn {
+    background: #0869b5 !important;
+    color: #ffffff !important;
+    border-color: #0869b5 !important;
+}
+
+html[data-theme="dark"] .nx-primary-btn:hover {
+    background: #064f8a !important;
+    color: #ffffff !important;
+}
+
+/* Secondary button */
+html[data-theme="dark"] .nx-secondary-btn {
+    background: #000000 !important;
+    color: #ffff !important;
+    border: 1px solid #444444 !important;
+}
+
+html[data-theme="dark"] .nx-secondary-btn:hover {
+    background: #111111 !important;
+    color: #55d8bb !important;
+    border-color: #10a889 !important;
+}
+
+/* Image frame */
+html[data-theme="dark"] .nx-image-frame {
+    background: #000000 !important;
+    border: 1px solid #222222 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Keep the image visible */
+html[data-theme="dark"] .nx-hero-image {
+    display: block;
+    opacity: 1 !important;
+}
+
+/* Image caption */
+html[data-theme="dark"] .nx-image-caption {
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .nx-image-caption strong {
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .nx-image-caption small {
+    color: #dddddd !important;
+}
+
+/* Floating information card */
+html[data-theme="dark"] .nx-floating-card {
+    background: #111111 !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7) !important;
+}
+
+html[data-theme="dark"] .nx-floating-text strong {
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .nx-floating-text small {
+    color: #cccccc !important;
+}
+
+/* Floating icons */
+html[data-theme="dark"] .nx-floating-icon,
+html[data-theme="dark"] .nx-floating-check {
+    background: #102a24 !important;
+    color: #55d8bb !important;
+}
+
+/* Decorative shapes */
+html[data-theme="dark"] .nx-image-decoration {
+    background: #000000 !important;
+    opacity: 0 !important;
+}
+
+/* Prevent inherited pseudo-element backgrounds */
+html[data-theme="dark"] .nx-hero::before,
+html[data-theme="dark"] .nx-hero::after {
+    background: #000000 !important;
+}
+
+/* Smooth theme transition */
+.nx-hero,
+.nx-hero-content,
+.nx-hero-visual,
+.nx-image-frame,
+.nx-floating-card,
+.nx-primary-btn,
+.nx-secondary-btn {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* ==========================================
+   SUPPORT DIFFERENT EXISTING THEME SELECTORS
+========================================== */
+
+body.dark .nx-hero,
+body.dark .nx-hero-container,
+body.dark .nx-hero-content,
+body.dark .nx-hero-visual,
+body.dark-theme .nx-hero,
+body.dark-theme .nx-hero-container,
+body.dark-theme .nx-hero-content,
+body.dark-theme .nx-hero-visual,
+body[data-theme="dark"] .nx-hero,
+body[data-theme="dark"] .nx-hero-container,
+body[data-theme="dark"] .nx-hero-content,
+body[data-theme="dark"] .nx-hero-visual,
+html.dark .nx-hero,
+html.dark .nx-hero-container,
+html.dark .nx-hero-content,
+html.dark .nx-hero-visual {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 1100px) {
+    .nx-hero {
+        padding: 70px 5%;
+    }
+
+    .nx-hero-container {
+        gap: 35px;
+    }
+
+    .nx-hero h1 {
+        font-size: clamp(36px, 4.5vw, 52px);
+    }
+
+    .nx-image-frame {
+        height: 420px;
+    }
+
+    .nx-benefits {
+        gap: 15px;
+    }
+
+    .nx-floating-card {
+        right: -5px;
+    }
+}
+
+@media (max-width: 850px) {
+    .nx-hero {
+        padding: 65px 6%;
+    }
+
+    .nx-hero-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .nx-hero-content {
+        max-width: 700px;
+    }
+
+    .nx-hero h1 {
+        font-size: clamp(40px, 7vw, 58px);
+    }
+
+    .nx-hero-description {
+        max-width: 650px;
+    }
+
+    .nx-hero-visual {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 15px 12px 25px;
+    }
+
+    .nx-image-frame {
+        height: 430px;
+    }
+
+    .nx-floating-card {
+        right: 0;
+        bottom: 45px;
+    }
+}
+
+@media (max-width: 550px) {
+    .nx-hero {
+        min-height: auto;
+        padding: 48px 20px;
+    }
+
+    .nx-hero-container {
+        gap: 32px;
+    }
+
+    .nx-eyebrow {
+        margin-bottom: 19px;
+        padding: 8px 11px;
+        font-size: 10px;
+        letter-spacing: 0.8px;
+    }
+
+    .nx-hero h1 {
+        margin-bottom: 19px;
+        font-size: clamp(33px, 9vw, 43px);
+        line-height: 1.18;
+        letter-spacing: -1px;
+    }
+
+    .nx-hero-description {
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .nx-hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 27px;
+    }
+
+    .nx-primary-btn,
+    .nx-secondary-btn {
+        width: 100%;
+        min-height: 52px;
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+    .nx-benefits {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .nx-benefit {
+        font-size: 12px;
+    }
+
+    .nx-hero-visual {
+        padding: 12px 5px 25px;
+    }
+
+    .nx-image-frame {
+        height: 320px;
+        border-width: 5px;
+        border-radius: 16px;
+    }
+
+    .nx-image-caption {
+        left: 15px;
+        right: 15px;
+        bottom: 16px;
+        gap: 10px;
+    }
+
+    .nx-image-caption strong {
+        font-size: 13px;
+    }
+
+    .nx-image-caption small {
+        font-size: 10px;
+    }
+
+    .nx-floating-card {
+        right: -2px;
+        bottom: 35px;
+        min-width: 0;
+        width: min(270px, calc(100% - 10px));
+        padding: 12px;
+        gap: 9px;
+    }
+
+    .nx-floating-icon {
+        width: 39px;
+        height: 39px;
+        min-width: 39px;
+    }
+
+    .nx-floating-text strong {
+        font-size: 12px;
+    }
+
+    .nx-floating-text small {
+        font-size: 10px;
+    }
+
+    .nx-floating-check {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+
+    .nx-decoration-one {
+        width: 85px;
+        height: 85px;
+    }
+
+    .nx-decoration-two {
+        width: 95px;
+        height: 95px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nx-hero *,
+    .nx-hero *::before,
+    .nx-hero *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+.nx-section {
+    width: 100%;
+    padding: 85px 6%;
+    background: var(--nx-bg);
+    color: var(--nx-text);
+    transition: background var(--nx-transition), color var(--nx-transition);
+}
+
+.nx-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.nx-section-heading {
+    max-width: 720px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.nx-section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+html[data-theme="dark"] .nx-section-label {
+    color: var(--blue);
+}
+
+.nx-section-heading h2,
+.nx-why-content h2,
+.nx-preparation-content h2 {
+    margin: 0 0 16px;
+    color: var(--green);
+    font-size: clamp(28px, 5vw, 36px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.nx-section-heading p,
+.nx-why-content > p,
+.nx-preparation-content > p {
+    margin: 0;
+    color: var(--nx-muted);
+    font-size: 15px;
+    line-height: 1.9;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   SECTION 4: WHY CHOOSE US
+========================================= */
+
+.nx-why-section {
+    background: var(--nx-bg-soft);
+}
+
+.nx-why-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.nx-why-image {
+    position: relative;
+    min-width: 0;
+    padding: 0 0 25px 20px;
+}
+
+.nx-why-image > img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.nx-image-note {
+    position: absolute;
+    inset-inline-start: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    max-width: calc(100% - 15px);
+    padding: 17px 20px;
+    border: 1px solid var(--green);
+    border-radius: 13px;
+    background: var(--blue-light);
+    color: var(--blue);
+    box-shadow: var(--nx-shadow);
+}
+
+.nx-image-note > svg {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    color: var(--nx-teal);
+}
+
+.nx-image-note strong,
+.nx-image-note span {
+    display: block;
+}
+
+.nx-image-note strong {
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.nx-image-note span {
+    color: var(--nx-muted);
+    font-size: 11px;
+}
+
+.nx-why-content h2,
+.nx-preparation-content h2 {
+    margin-bottom: 20px;
+}
+
+.nx-why-list {
+    display: grid;
+    gap: 23px;
+    margin: 28px 0;
+}
+
+.nx-why-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.nx-why-point > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    margin-top: 2px;
+    border-radius: 50%;
+    background: var(--nx-teal-light);
+    color: var(--nx-teal-dark);
+}
+
+html[data-theme="dark"] .nx-why-point > span {
+    background: #102A24;
+    color: #55D8BB;
+}
+
+.nx-why-point > span svg {
+    width: 15px;
+    height: 15px;
+}
+
+.nx-why-point h3 {
+    margin: 0 0 5px;
+    color: var(--blue);
+    font-size: 15px;
+}
+
+.nx-why-point p {
+    margin: 0;
+    color: var(--nx-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* BUTTONS */
+
+.nx-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 49px;
+    padding: 13px 20px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--nx-transition);
+}
+
+.nx-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.nx-btn-primary {
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--green)
+    );
+    color: white;
+}
+
+.nx-btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SECTION 2: TRUST HIGHLIGHTS
+========================================= */
+
+.nx-trust-section {
+    padding-top: 38px;
+    padding-bottom: 38px;
+    background: var(--nx-blue-light);
+}
+
+.nx-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.nx-trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+    border: 1px solid var(--blue);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.nx-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 13px;
+    background: var(--nx-blue-light);
+    color: var(--nx-blue);
+}
+
+html[data-theme="dark"] .nx-icon-box {
+    background: #101F2B;
+    color: var(--blue);
+}
+
+.nx-icon-box svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nx-trust-item h3 {
+    margin: 1px 0 5px;
+    color: var(--green);
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.nx-trust-item p {
+    margin: 0;
+    color: var(--nx-muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   SECTION 3: SERVICES
+========================================= */
+
+.nx-services-section {
+    background: var(--nx-bg);
+}
+
+.nx-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.nx-service-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--blue);
+    border-radius: 20px;
+    background: var(--nx-card);
+    box-shadow: var(--nx-shadow);
+    transition: transform var(--nx-transition), border-color var(--nx-transition);
+}
+
+.nx-service-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--green);
+}
+
+.nx-service-image {
+    position: relative;
+    height: 210px;
+    overflow: hidden;
+    background: var(--nx-bg-soft);
+}
+
+.nx-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.nx-service-card:hover .nx-service-image img {
+    transform: scale(1.05);
+}
+
+.nx-service-icon {
+    position: absolute;
+    inset-inline-start: 18px;
+    bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--green);
+    color: var(--blue);
+}
+
+.nx-service-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.nx-service-content {
+    padding: 23px 20px 24px;
+}
+
+.nx-service-content h3 {
+    margin: 0 0 10px;
+    color: var(--green);
+    font-size: 20px;
+}
+
+.nx-service-content p {
+    min-height: 75px;
+    margin: 0 0 19px;
+    color: var(--nx-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.nx-service-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+html[data-theme="dark"] .nx-service-content a {
+    color: var(--blue);
+}
+
+.nx-service-content a svg {
+    width: 16px;
+    height: 16px;
+    transition: transform var(--nx-transition);
+}
+
+.nx-service-content a:hover svg {
+    transform: translateX(4px);
+}
+
+
+
+/* =========================================
+   SECTION 5: JOURNEY TIMELINE
+========================================= */
+
+.nx-journey-section {
+    background: var(--nx-bg);
+}
+
+.nx-journey-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.nx-journey-card {
+    position: relative;
+    min-width: 0;
+    padding: 30px 23px;
+    border: 1px solid var(--blue);
+    border-radius: 20px;
+    background: var(--nx-card);
+    transition: transform var(--nx-transition), border-color var(--nx-transition);
+}
+
+.nx-journey-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--green);
+}
+
+.nx-step-number {
+    position: absolute;
+    top: 18px;
+    inset-inline-end: 20px;
+    color: var(--blue);
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.nx-journey-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 24px;
+    border-radius: 15px;
+    border: 1px solid var(--green);
+    color: var(--blue);
+}
+
+html[data-theme="dark"] .nx-journey-icon {
+    background: #101F2B;
+    color: var(--blue);
+}
+
+.nx-journey-icon svg {
+    width: 27px;
+    height: 27px;
+}
+
+.nx-journey-card h3 {
+    margin: 0 0 12px;
+    color: var(--green);
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.nx-journey-card p {
+    margin: 0;
+    color: var(--nx-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+
+
+/* =========================================
+   SECTION 7: SCAN PREPARATION
+========================================= */
+
+.nx-preparation-section {
+    background: var(--nx-bg-soft);
+}
+
+.nx-preparation-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.nx-prep-list {
+    display: grid;
+    gap: 22px;
+    margin: 28px 0;
+}
+
+.nx-prep-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.nx-prep-item > svg {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    margin-top: 3px;
+    color: var(--green);
+}
+
+.nx-prep-item h3 {
+    margin: 0 0 5px;
+    color: var(--blue);
+    font-size: 15px;
+}
+
+.nx-prep-item p {
+    margin: 0;
+    color: var(--nx-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.nx-preparation-image {
+    position: relative;
+    min-width: 0;
+}
+
+.nx-preparation-image > img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid var(--blue);
+    box-shadow: var(--green);
+}
+
+.nx-preparation-badge {
+    position: absolute;
+    inset-inline-start: 18px;
+    bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    background: var(--nx-blue-light);
+    color: white;
+    box-shadow: var(--nx-shadow);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.nx-preparation-badge svg {
+    width: 21px;
+    height: 21px;
+    color: var(--nx-teal);
+}
+
+/* =========================================
+   SECTION 8: GALLERY
+========================================= */
+
+.nx-gallery-section {
+    background: var(--nx-bg);
+}
+
+.nx-gallery-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1fr;
+    grid-template-rows: repeat(2, 235px);
+    gap: 18px;
+}
+
+.nx-gallery-item {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    background: var(--nx-card);
+}
+
+.nx-gallery-large {
+    grid-row: span 2;
+}
+
+.nx-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.nx-gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.nx-gallery-item::after {
+    position: absolute;
+    inset: 35% 0 0;
+    content: "";
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+    pointer-events: none;
+}
+
+.nx-gallery-item figcaption {
+    position: absolute;
+    z-index: 1;
+    inset-inline-start: 20px;
+    inset-inline-end: 20px;
+    bottom: 18px;
+    color: #FFFFFF;
+}
+
+.nx-gallery-item figcaption strong,
+.nx-gallery-item figcaption span {
+    display: block;
+}
+
+.nx-gallery-item figcaption strong {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.nx-gallery-item figcaption span {
+    color: #EEEEEE;
+    font-size: 11px;
+}
+
+/* =========================================
+   SECTION 11: APPOINTMENT CTA
+========================================= */
+
+.nx-appointment-section {
+    background: var(--nx-bg);
+    padding-top: 65px;
+    padding-bottom: 85px;
+}
+
+.nx-appointment-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    min-height: 310px;
+    padding: 55px 60px;
+    overflow: hidden;
+    border-radius: 23px;
+    background: linear-gradient(120deg, #064F8A, #0869B5 60%, #087F88);
+    color: #FFFFFF;
+}
+
+.nx-appointment-content {
+    position: relative;
+    z-index: 2;
+    max-width: 690px;
+}
+
+.nx-appointment-label {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.nx-appointment-content h2 {
+    margin: 0 0 15px;
+    color: var(--green);
+    font-size: clamp(30px, 3.5vw, 44px);
+    line-height: 1.2;
+}
+
+.nx-appointment-content p {
+    max-width: 570px;
+    margin: 0 0 25px;
+    color: #E2F1FC;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.nx-appointment-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.nx-btn-light {
+    border: 1px solid var(--green);
+    color: black;
+    background: transparent;
+}
+
+.nx-btn-light:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nx-btn-outline {
+    border-color: var(--green);
+    background: transparent;
+    color: black;
+}
+
+.nx-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--blue);
+    color: white;
+}
+
+.nx-appointment-art {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 235px;
+    height: 235px;
+    min-width: 235px;
+}
+
+.nx-appointment-art > svg {
+    position: relative;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    color: #FFFFFF;
+    stroke-width: 1.3;
+}
+
+.nx-art-circle {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+
+.nx-art-circle-one {
+    width: 180px;
+    height: 180px;
+}
+
+.nx-art-circle-two {
+    width: 235px;
+    height: 235px;
+}
+
+.nx-art-plus {
+    position: absolute;
+    color: #8DF2DD;
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.nx-art-plus-one {
+    top: 8px;
+    inset-inline-end: 22px;
+}
+
+.nx-art-plus-two {
+    bottom: 7px;
+    inset-inline-start: 18px;
+}
+
+
+
+/* =========================================
+   TABLET: 1024px AND BELOW
+========================================= */
+
+@media (max-width: 1024px) {
+    .nx-section {
+        padding: 70px 4%;
+    }
+
+    .nx-trust-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .nx-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nx-why-grid,
+    .nx-preparation-grid {
+        gap: 35px;
+    }
+
+    .nx-why-image > img {
+        height: 430px;
+    }
+
+    .nx-preparation-image > img {
+        height: 450px;
+    }
+
+    .nx-journey-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nx-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, 230px);
+    }
+
+    .nx-gallery-large {
+        grid-row: auto;
+    }
+
+    .nx-appointment-card {
+        padding: 45px;
+    }
+
+    .nx-appointment-art {
+        width: 180px;
+        height: 180px;
+        min-width: 180px;
+    }
+
+    .nx-art-circle-one {
+        width: 140px;
+        height: 140px;
+    }
+
+    .nx-art-circle-two {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* =========================================
+   TABLET / SMALL LAPTOP: 768px AND BELOW
+========================================= */
+
+@media (max-width: 768px) {
+    .nx-section {
+        padding: 60px 5%;
+    }
+
+    .nx-section-heading {
+        margin-bottom: 32px;
+    }
+
+    .nx-why-grid,
+    .nx-preparation-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .nx-why-image {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .nx-why-image > img {
+        height: 400px;
+    }
+
+    .nx-why-content,
+    .nx-preparation-content {
+        width: 100%;
+    }
+
+    .nx-preparation-image {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .nx-preparation-image > img {
+        height: 400px;
+    }
+
+    .nx-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, 200px);
+        gap: 13px;
+    }
+
+    .nx-appointment-card {
+        padding: 38px 30px;
+    }
+
+    .nx-appointment-art {
+        width: 130px;
+        height: 130px;
+        min-width: 130px;
+    }
+
+    .nx-art-circle-one {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nx-art-circle-two {
+        width: 130px;
+        height: 130px;
+    }
+
+    .nx-appointment-art > svg {
+        width: 65px;
+        height: 65px;
+    }
+
+    .nx-page-controls {
+        top: 10px;
+        inset-inline-end: 10px;
+    }
+}
+
+/* =========================================
+   MOBILE: 550px AND BELOW
+========================================= */
+
+@media (max-width: 550px) {
+    .nx-section {
+        padding: 48px 20px;
+    }
+
+    .nx-section-heading h2,
+    .nx-why-content h2,
+    .nx-preparation-content h2 {
+        font-size: 29px;
+        letter-spacing: -0.4px;
+    }
+
+    .nx-section-heading p,
+    .nx-why-content > p,
+    .nx-preparation-content > p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .nx-trust-section {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .nx-trust-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .nx-trust-item h3 {
+        font-size: 14px;
+    }
+
+    .nx-services-grid,
+    .nx-journey-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .nx-service-image {
+        height: 220px;
+    }
+
+    .nx-service-content p {
+        min-height: auto;
+    }
+
+    .nx-journey-card {
+        padding: 25px 20px;
+    }
+
+    .nx-journey-icon {
+        margin-bottom: 18px;
+    }
+
+    .nx-why-image {
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+        padding-bottom: 20px;
+    }
+
+    .nx-why-image > img {
+        height: 320px;
+    }
+
+    .nx-image-note {
+        inset-inline-start: 8px;
+        padding: 12px;
+    }
+
+    .nx-image-note strong {
+        font-size: 12px;
+    }
+
+    .nx-image-note span {
+        font-size: 10px;
+    }
+
+    .nx-why-list,
+    .nx-prep-list {
+        gap: 20px;
+        margin: 23px 0;
+    }
+
+    .nx-preparation-image > img {
+        height: 320px;
+    }
+
+    .nx-gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 240px);
+        gap: 14px;
+    }
+
+    .nx-gallery-item figcaption {
+        inset-inline-start: 15px;
+        inset-inline-end: 15px;
+        bottom: 15px;
+    }
+
+    .nx-appointment-section {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+
+    .nx-appointment-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 35px 23px;
+        border-radius: 17px;
+    }
+
+    .nx-appointment-content h2 {
+        font-size: 30px;
+    }
+
+    .nx-appointment-content p {
+        font-size: 13px;
+    }
+
+    .nx-appointment-buttons {
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nx-appointment-buttons .nx-btn {
+        width: 100%;
+    }
+
+    .nx-appointment-art {
+        align-self: center;
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+    }
+
+    .nx-art-circle-one {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nx-art-circle-two {
+        width: 120px;
+        height: 120px;
+    }
+
+    .nx-page-controls {
+        position: relative;
+        top: auto;
+        inset-inline-end: auto;
+        justify-content: flex-end;
+        padding: 12px 20px;
+        background: var(--nx-bg);
+    }
+
+    .nx-page-controls button {
+        min-height: 39px;
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE: 360px AND BELOW
+========================================= */
+
+@media (max-width: 360px) {
+    .nx-section {
+        padding: 40px 15px;
+    }
+
+    .nx-section-heading h2,
+    .nx-why-content h2,
+    .nx-preparation-content h2 {
+        font-size: 26px;
+    }
+
+    .nx-service-content {
+        padding: 20px 16px;
+    }
+
+    .nx-service-image {
+        height: 190px;
+    }
+
+    .nx-why-image > img,
+    .nx-preparation-image > img {
+        height: 270px;
+    }
+
+    .nx-appointment-card {
+        padding: 28px 17px;
+    }
+
+    .nx-appointment-content h2 {
+        font-size: 26px;
+    }
+
+    .nx-page-controls button {
+        gap: 6px;
+        padding: 8px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

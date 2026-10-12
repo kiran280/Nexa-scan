@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f8fd">
+  <title>Appointment | Nexa Scan</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+ <link rel="stylesheet" href="appointment.css">
+</head>
+
+<body>
+
+  <main class="appointment-page">
+
+    <!-- HEADER -->
+    <header class="appointment-header">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Nexa Scan Logo">
+
+        <span class="brand-details">
+          <span class="brand-name">
+            Nexa <span>Scan</span>
+          </span>
+          <span class="brand-tagline">Advanced Imaging.</span>
+        </span>
+      </a>
+
+      <div class="header-actions">
+
+        <button type="button"
+                class="icon-button"
+                id="themeToggle"
+                aria-label="Switch to dark theme"
+                title="Switch theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button type="button"
+                class="icon-button"
+                id="rtlToggle"
+                aria-label="Switch text direction"
+                title="Switch text direction">
+          <i class="fa-solid fa-left-right"></i>
+        </button>
+
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <section class="appointment-main">
+
+      <div class="appointment-intro">
+
+        <span class="eyebrow">
+          <span class="eyebrow-line"></span>
+          YOUR HEALTH, OUR PRIORITY
+        </span>
+
+        <h1>
+          Your Journey to
+          <span>Clearer Answers</span>
+          Starts Here.
+        </h1>
+
+        <p class="intro-description">
+          Book your diagnostic scan with confidence. Experience
+          advanced imaging, professional care, and a comfortable
+          environment designed around your needs.
+        </p>
+
+        <div class="trust-features">
+
+          <div class="trust-item">
+            <span class="trust-icon">
+              <i class="fa-solid fa-user-doctor"></i>
+            </span>
+            <span>
+              <strong>Expert Radiology Team</strong>
+              <small>Professional and attentive care</small>
+            </span>
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </span>
+            <span>
+              <strong>Patient Comfort</strong>
+              <small>Support throughout your visit</small>
+            </span>
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">
+              <i class="fa-solid fa-microscope"></i>
+            </span>
+            <span>
+              <strong>Advanced Imaging</strong>
+              <small>Modern diagnostic technology</small>
+            </span>
+          </div>
+
+        </div>
+
+        <div class="support-note">
+          <span class="support-icon">
+            <i class="fa-solid fa-headset"></i>
+          </span>
+          <span>
+            <strong>We're here to help</strong>
+            <small>Contact our team for appointment assistance.</small>
+          </span>
+        </div>
+
+        <div class="decorative-circle circle-one"></div>
+        <div class="decorative-circle circle-two"></div>
+
+      </div>
+
+      <!-- APPOINTMENT FORM -->
+      <div class="appointment-form-wrapper">
+
+        <div class="form-top">
+          <div>
+            <span class="form-label">BOOK YOUR VISIT</span>
+            <h2>Request an Appointment</h2>
+            <p>Enter your details and preferred scan schedule.</p>
+          </div>
+
+          <div class="form-icon">
+            <i class="fa-regular fa-calendar-check"></i>
+          </div>
+        </div>
+
+        <form id="appointmentForm">
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="fullName">Full Name <span>*</span></label>
+              <div class="input-wrap">
+                <i class="fa-regular fa-user"></i>
+                <input type="text"
+                       id="fullName"
+                       name="fullName"
+                       placeholder="Enter your full name"
+                       autocomplete="name"
+                       required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number <span>*</span></label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter phone number"
+                       autocomplete="tel"
+                       inputmode="tel"
+                       pattern="[0-9+() -]{7,20}"
+                       required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-wrap">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="you@example.com"
+                       autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="scanType">Scan Type <span>*</span></label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-x-ray"></i>
+                <select id="scanType" name="scanType" required>
+                  <option value="" disabled selected>Select scan type</option>
+                  <option value="MRI Scan">MRI Scan</option>
+                  <option value="CT Scan">CT Scan</option>
+                  <option value="Ultrasound Scan">Ultrasound Scan</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Preferred Date <span>*</span></label>
+              <div class="input-wrap">
+                <i class="fa-regular fa-calendar"></i>
+                <input type="date"
+                       id="date"
+                       name="date"
+                       required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Preferred Time <span>*</span></label>
+              <div class="input-wrap">
+                <i class="fa-regular fa-clock"></i>
+                <select id="time" name="time" required>
+                  <option value="" disabled selected>Select time</option>
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-group message-group">
+            <label for="message">Additional Information</label>
+            <textarea id="message"
+                      name="message"
+                      rows="2"
+                      placeholder="Optional appointment requests..."></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="consent" required>
+            <span>I agree to be contacted regarding my appointment.</span>
+          </label>
+
+          <button type="submit" class="submit-button">
+            <span>Request Appointment</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p id="formStatus"
+             class="form-status"
+             role="status"
+             aria-live="polite"></p>
+
+          <div class="secure-note">
+            <i class="fa-solid fa-shield-halved"></i>
+            Your information should be handled securely.
+          </div>
+
+        </form>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="appointment-footer">
+      <span>© <span id="currentYear"></span> Nexa Scan</span>
+      <span>Advanced Imaging. Compassionate Care.</span>
+    </footer>
+
+  </main>
+
+  <script>
+    // CURRENT YEAR
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    const html = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const rtlToggle = document.getElementById("rtlToggle");
+    const appointmentForm = document.getElementById("appointmentForm");
+    const formStatus = document.getElementById("formStatus");
+    const dateInput = document.getElementById("date");
+
+    // LOCAL DATE: PREVENT PAST APPOINTMENTS
+    function getLocalDateString() {
+      const date = new Date();
+
+      return [
+        date.getFullYear(),
+        String(date.getMonth() + 1).padStart(2, "0"),
+        String(date.getDate()).padStart(2, "0")
+      ].join("-");
+    }
+
+    dateInput.min = getLocalDateString();
+
+    // LIGHT / DARK THEME
+    themeToggle.addEventListener("click", () => {
+      const dark = html.dataset.theme !== "dark";
+
+      html.dataset.theme = dark ? "dark" : "light";
+
+      themeToggle.innerHTML = dark
+        ? '<i class="fa-solid fa-sun"></i>'
+        : '<i class="fa-solid fa-moon"></i>';
+
+      themeToggle.title = dark
+        ? "Switch to light theme"
+        : "Switch to dark theme";
+
+      themeToggle.setAttribute("aria-label", themeToggle.title);
+    });
+
+    // RTL / LTR TOGGLE
+    rtlToggle.addEventListener("click", () => {
+      html.dir = html.dir === "rtl" ? "ltr" : "rtl";
+
+      rtlToggle.title = html.dir === "rtl"
+        ? "Switch to LTR direction"
+        : "Switch to RTL direction";
+
+      rtlToggle.setAttribute("aria-label", rtlToggle.title);
+    });
+
+    // APPOINTMENT FORM VALIDATION
+    appointmentForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      formStatus.className = "form-status";
+      formStatus.textContent = "";
+
+      if (!appointmentForm.reportValidity()) {
+        return;
+      }
+
+      if (dateInput.value < getLocalDateString()) {
+        formStatus.textContent =
+          "Please select today or a future date.";
+
+        formStatus.className = "form-status visible error";
+        dateInput.focus();
+        return;
+      }
+
+      formStatus.textContent =
+        "Form validated successfully. Connect your appointment system to submit your request.";
+
+      formStatus.className = "form-status visible success";
+    });
+  </script>
+
+</body>
+</html>
