@@ -1855,9 +1855,853 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
 
 
 
+/* ================= APPOINTMENT SECTION ================= */
+#nxAppointmentSection {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 95px 24px;
+  background: var(--nx-bg);
+}
+
+#nxAppointmentSection::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  top: -190px;
+  right: -100px;
+  border-radius: 50%;
+  background: rgba(22,119,210,.07);
+  pointer-events: none;
+}
+
+#nxAppointmentContainer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
+  align-items: center;
+  gap: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/* ================= LEFT CONTENT ================= */
+#nxAppointmentContent {
+  animation: nxFadeUp .8s ease both;
+}
+
+#nxAppointmentEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 22px;
+}
+
+#nxAppointmentHeading {
+  font-size: clamp(28px,5vw,36px);
+  line-height: 1.17;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 22px;
+  color: var(--green);
+}
+
+#nxAppointmentHeading span {
+  display: block;
+  color: var(--green);
+}
+
+#nxAppointmentDescription {
+  max-width: 490px;
+  color: var(--nx-muted);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+/* ================= BENEFITS ================= */
+#nxAppointmentBenefits {
+  display: grid;
+  gap: 23px;
+}
+
+.nxAppointmentBenefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nxAppointmentBenefitIcon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  background: var(--nx-card);
+  border: 1px solid var(--green);
+  border-radius: 15px;
+  color: var(--blue);
+  transition: transform .3s ease;
+}
+
+.nxAppointmentBenefit:hover .nxAppointmentBenefitIcon {
+  transform: translateY(-4px);
+}
+
+.nxAppointmentBenefitIcon svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nxAppointmentBenefit h3 {
+  font-size: 15px;
+  font-weight: 750;
+  margin-bottom: 5px;
+}
+
+.nxAppointmentBenefit p {
+  color: var(--nx-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ================= SUPPORT BOX ================= */
+#nxAppointmentSupport {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+  margin-top: 32px;
+  border: 1px solid var(--green);
+  border-radius: 15px;
+  background: var(--nx-card);
+}
+
+#nxAppointmentSupportIcon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #eaf4ff;
+  color: var(--blue);
+  border-radius: 12px;
+}
+
+#nxAppointmentSupportIcon svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#nxAppointmentSupport h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#nxAppointmentSupport p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--nx-muted);
+}
+
+/* ================= FORM CARD ================= */
+#nxAppointmentCard {
+  min-width: 0;
+  padding: 35px;
+  background: var(--nx-card);
+  border: 1px solid var(--green);
+  border-radius: 24px;
+  box-shadow: var(--nx-shadow);
+  animation: nxFadeUp .9s .1s ease both;
+}
+
+#nxAppointmentFormHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 27px;
+}
+
+#nxAppointmentFormLabel {
+  display: block;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 9px;
+}
+
+#nxAppointmentFormTitle {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -.6px;
+  margin-bottom: 8px;
+}
+
+#nxAppointmentFormSubtitle {
+  color: var(--nx-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+#nxAppointmentCalendarIcon {
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #eaf4ff;
+  color: var(--blue);
+}
+
+#nxAppointmentCalendarIcon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ================= FORM GRID ================= */
+#nxAppointmentForm {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 19px 16px;
+}
+
+.nxAppointmentField {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.nxAppointmentFieldFull {
+  grid-column: 1 / -1;
+}
+
+.nxAppointmentField label {
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--nx-text);
+}
+
+.nxAppointmentRequired {
+  color: #e14b58;
+}
+
+.nxAppointmentField input,
+.nxAppointmentField select,
+.nxAppointmentField textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  background: var(--nx-field);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  color: var(--nx-text);
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color .25s, box-shadow .25s;
+}
+
+.nxAppointmentField input,
+.nxAppointmentField select {
+  min-height: 47px;
+}
+
+.nxAppointmentField textarea {
+  min-height: 85px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.nxAppointmentField input::placeholder,
+.nxAppointmentField textarea::placeholder {
+  color: var(--nx-muted);
+  opacity: .85;
+}
+
+.nxAppointmentField input:focus,
+.nxAppointmentField select:focus,
+.nxAppointmentField textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(22,119,210,.11);
+}
+
+.nxAppointmentField select {
+  cursor: pointer;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+#nxAppointmentSubmit {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background .25s, transform .25s, box-shadow .25s;
+}
+
+#nxAppointmentSubmit:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(22,119,210,.2);
+}
+
+#nxAppointmentSubmit svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform .25s;
+}
+
+#nxAppointmentSubmit:hover svg {
+  transform: translateX(4px);
+}
+
+#nxAppointmentStatus {
+  display: none;
+  grid-column: 1 / -1;
+  padding: 13px;
+  border-radius: 10px;
+  background: #eaf4ff;
+  color: #17466e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+#nxAppointmentStatus.nxAppointmentStatusVisible {
+  display: block;
+}
+
+#nxAppointmentPrivacy {
+  grid-column: 1 / -1;
+  margin-top: -7px;
+  text-align: center;
+  color: var(--nx-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes nxFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   NEXA SCAN APPOINTMENT — RESPONSIVE DESIGN
+   ========================================= */
+
+/* Large desktops — 1440px and above */
+@media (min-width: 1440px) {
+    #nxAppointmentSection {
+        padding: 110px 40px;
+    }
+
+    #nxAppointmentContainer {
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 70px;
+    }
+
+    #nxAppointmentCard {
+        padding: 40px;
+    }
+}
+
+/* Standard desktops and laptops — 1200px */
+@media (max-width: 1200px) {
+    #nxAppointmentSection {
+        padding: 80px 30px;
+    }
+
+    #nxAppointmentContainer {
+        max-width: 1000px;
+        margin: 0 auto;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 35px;
+    }
+
+    #nxAppointmentCard {
+        padding: 28px;
+    }
+
+    #nxAppointmentHeading {
+        font-size: clamp(28px, 3.5vw, 35px);
+    }
+}
+
+/* Small laptops and landscape tablets — 992px */
+@media (max-width: 992px) {
+    #nxAppointmentSection {
+        padding: 70px 24px;
+    }
+
+    #nxAppointmentContainer {
+        max-width: 760px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    #nxAppointmentContent {
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #nxAppointmentDescription {
+        max-width: 600px;
+    }
+
+    #nxAppointmentBenefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .nxAppointmentBenefit {
+        align-items: flex-start;
+    }
+
+    #nxAppointmentSupport {
+        max-width: 600px;
+    }
+
+    #nxAppointmentCard {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px;
+    }
+}
+
+/* Tablets — 768px */
+@media (max-width: 768px) {
+    #nxAppointmentSection {
+        padding: 60px 20px;
+    }
+
+    #nxAppointmentSection::before {
+        width: 280px;
+        height: 280px;
+        top: -120px;
+        right: -100px;
+    }
+
+    #nxAppointmentContainer {
+        width: 100%;
+        gap: 32px;
+    }
+
+    #nxAppointmentEyebrow {
+        font-size: 11px;
+        margin-bottom: 16px;
+    }
+
+    #nxAppointmentHeading {
+        font-size: clamp(27px, 5vw, 34px);
+        line-height: 1.25;
+        letter-spacing: -0.8px;
+        margin-bottom: 16px;
+    }
+
+    #nxAppointmentDescription {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+    #nxAppointmentBenefits {
+        gap: 20px;
+    }
+
+    .nxAppointmentBenefitIcon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+    }
+
+    .nxAppointmentBenefit h3 {
+        font-size: 14px;
+    }
+
+    .nxAppointmentBenefit p {
+        font-size: 12px;
+    }
+
+    #nxAppointmentSupport {
+        margin-top: 25px;
+        padding: 15px;
+    }
+
+    #nxAppointmentCard {
+        padding: 26px;
+        border-radius: 20px;
+    }
+
+    #nxAppointmentFormHeading {
+        margin-bottom: 23px;
+    }
+
+    #nxAppointmentFormTitle {
+        font-size: 23px;
+    }
+
+    #nxAppointmentForm {
+        gap: 17px 14px;
+    }
+
+    .nxAppointmentField input,
+    .nxAppointmentField select,
+    .nxAppointmentField textarea {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
+
+/* Large mobile phones — 576px */
+@media (max-width: 576px) {
+    #nxAppointmentSection {
+        padding: 45px 16px;
+    }
+
+    #nxAppointmentContainer {
+        gap: 28px;
+    }
+
+    #nxAppointmentHeading {
+        font-size: 29px;
+        line-height: 1.3;
+    }
+
+    #nxAppointmentDescription {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    #nxAppointmentBenefits {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .nxAppointmentBenefit {
+        gap: 12px;
+    }
+
+    .nxAppointmentBenefitIcon {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    #nxAppointmentSupport {
+        align-items: flex-start;
+        gap: 11px;
+        padding: 14px;
+    }
+
+    #nxAppointmentSupportIcon {
+        width: 39px;
+        height: 39px;
+    }
+
+    #nxAppointmentSupport h3 {
+        font-size: 13px;
+    }
+
+    #nxAppointmentSupport p {
+        font-size: 11px;
+    }
+
+    #nxAppointmentCard {
+        padding: 22px 17px;
+        border-radius: 17px;
+    }
+
+    #nxAppointmentFormHeading {
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 21px;
+    }
+
+    #nxAppointmentFormLabel {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    #nxAppointmentFormTitle {
+        font-size: 21px;
+    }
+
+    #nxAppointmentFormSubtitle {
+        font-size: 12px;
+    }
+
+    #nxAppointmentCalendarIcon {
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+    }
+
+    #nxAppointmentCalendarIcon svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    #nxAppointmentForm {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .nxAppointmentFieldFull {
+        grid-column: auto;
+    }
+
+    .nxAppointmentField label {
+        font-size: 12px;
+    }
+
+    .nxAppointmentField input,
+    .nxAppointmentField select {
+        min-height: 46px;
+    }
+
+    .nxAppointmentField input,
+    .nxAppointmentField select,
+    .nxAppointmentField textarea {
+        font-size: 14px;
+        border-radius: 9px;
+    }
+
+    .nxAppointmentField textarea {
+        min-height: 100px;
+    }
+
+    #nxAppointmentSubmit {
+        grid-column: auto;
+        min-height: 49px;
+        font-size: 13px;
+    }
+
+    #nxAppointmentStatus,
+    #nxAppointmentPrivacy {
+        grid-column: auto;
+    }
+}
+
+/* Small mobile phones — 380px */
+@media (max-width: 380px) {
+    #nxAppointmentSection {
+        padding: 35px 12px;
+    }
+
+    #nxAppointmentHeading {
+        font-size: 26px;
+        letter-spacing: -0.5px;
+    }
+
+    #nxAppointmentEyebrow {
+        gap: 7px;
+        font-size: 10px;
+        letter-spacing: 0.8px;
+    }
+
+    #nxAppointmentCard {
+        padding: 19px 13px;
+    }
+
+    #nxAppointmentFormTitle {
+        font-size: 19px;
+    }
+
+    #nxAppointmentCalendarIcon {
+        width: 36px;
+        height: 36px;
+    }
+
+    #nxAppointmentSupport {
+        padding: 12px;
+    }
+
+    .nxAppointmentBenefitIcon {
+        width: 38px;
+        height: 38px;
+    }
+
+    #nxAppointmentSubmit {
+        gap: 8px;
+        padding: 12px;
+    }
+}
+
+/* Very small screens — 320px */
+@media (max-width: 320px) {
+    #nxAppointmentSection {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    #nxAppointmentHeading {
+        font-size: 24px;
+    }
+
+    #nxAppointmentCard {
+        padding: 16px 11px;
+    }
+
+    #nxAppointmentFormHeading {
+        gap: 7px;
+    }
+
+    #nxAppointmentFormTitle {
+        font-size: 18px;
+    }
+
+    #nxAppointmentFormSubtitle {
+        font-size: 11px;
+    }
+
+    .nxAppointmentField input,
+    .nxAppointmentField select,
+    .nxAppointmentField textarea {
+        padding: 11px 9px;
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    #nxAppointmentContent,
+    #nxAppointmentCard {
+        animation: none;
+    }
+
+    .nxAppointmentBenefitIcon,
+    #nxAppointmentSubmit,
+    #nxAppointmentSubmit svg {
+        transition: none;
+    }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  #nxAppointmentSection *,
+  #nxAppointmentSection *::before,
+  #nxAppointmentSection *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 
 
 
+
+
+/* ================================
+   NEXA SCAN — DROPDOWN THEME
+================================ */
+
+/* Default Light Theme */
+#nxAppointmentForm select,
+#nxAppointmentForm select option {
+    color: grey;
+}
+
+#nxAppointmentForm select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--green);
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
+}
+
+#nxAppointmentForm select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(22, 119, 210, 0.12);
+}
+
+
+
+
+
+
+/* Dark Theme — Black Dropdown */
+body.nx-dark #nxAppointmentForm select,
+body.nx-dark #nxAppointmentForm select option {
+    background-color: #000000 !important;
+    color: #f5f7fb !important;
+}
+
+body.nx-dark #nxAppointmentForm select {
+    border-color: #292929;
+    color-scheme: dark;
+}
+
+body.nx-dark #nxAppointmentForm select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(85, 170, 255, 0.15);
+}
+
+/* Disabled / Placeholder Option */
+#nxAppointmentForm select option[value=""] {
+    color: #7b8797;
+}
+
+body.nx-dark #nxAppointmentForm select option[value=""] {
+    background-color: #000000 !important;
+    color: #b5bfcc !important;
+}
 
 
 

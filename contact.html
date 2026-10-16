@@ -245,7 +245,7 @@
  
  
             <a
-                href="appointment.html"
+                href="contact.html#nxAppointmentSection"
                 class="login-btn"
 >
                 Appointment
@@ -649,6 +649,239 @@
 
 
 
+
+
+
+
+
+
+<!-- ======================================
+     NEXA SCAN APPOINTMENT SECTION
+====================================== -->
+<section id="nxAppointmentSection">
+
+  <div id="nxAppointmentContainer">
+
+    <!-- LEFT CONTENT -->
+    <div id="nxAppointmentContent">
+
+      <div id="nxAppointmentEyebrow">
+        <span id="nxAppointmentEyebrowLine"></span>
+        APPOINTMENT BOOKING
+      </div>
+
+      <h2 id="nxAppointmentHeading">
+        Your Health Deserves
+        <span>Expert Attention.</span>
+      </h2>
+
+      <p id="nxAppointmentDescription">
+        Schedule your diagnostic imaging appointment with Nexa Scan.
+        Our experienced team is here to make your scan experience
+        comfortable, convenient, and reassuring.
+      </p>
+
+      <div id="nxAppointmentBenefits">
+
+        <div class="nxAppointmentBenefit" id="nxAppointmentBenefitOne">
+          <div class="nxAppointmentBenefitIcon" id="nxAppointmentCalendarBenefitIcon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2"/>
+              <path d="M16 3v4M8 3v4M3 10h18"/>
+            </svg>
+          </div>
+          <div>
+            <h3 id="nxAppointmentBenefitOneTitle">Convenient Scheduling</h3>
+            <p id="nxAppointmentBenefitOneText">Choose your preferred date and time.</p>
+          </div>
+        </div>
+
+        <div class="nxAppointmentBenefit" id="nxAppointmentBenefitTwo">
+          <div class="nxAppointmentBenefitIcon" id="nxAppointmentCareIcon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <div>
+            <h3 id="nxAppointmentBenefitTwoTitle">Patient-Focused Care</h3>
+            <p id="nxAppointmentBenefitTwoText">Support throughout your imaging journey.</p>
+          </div>
+        </div>
+
+        <div class="nxAppointmentBenefit" id="nxAppointmentBenefitThree">
+          <div class="nxAppointmentBenefitIcon" id="nxAppointmentTimeIcon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div>
+            <h3 id="nxAppointmentBenefitThreeTitle">Appointment Confirmation</h3>
+            <p id="nxAppointmentBenefitThreeText">Our team will follow up on your request.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="nxAppointmentSupport">
+        <div id="nxAppointmentSupportIcon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2
+              19.8 19.8 0 0 1-8.6-3.1
+              19.4 19.4 0 0 1-6-6
+              19.8 19.8 0 0 1-3.1-8.7
+              A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7
+              c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9
+              a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5
+              c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1Z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 id="nxAppointmentSupportTitle">Need assistance?</h3>
+          <p id="nxAppointmentSupportText">
+            Contact our team for help choosing your scan.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div id="nxAppointmentCard">
+
+      <div id="nxAppointmentFormHeading">
+        <div>
+          <span id="nxAppointmentFormLabel">GET STARTED</span>
+          <h3 id="nxAppointmentFormTitle">Book an Appointment</h3>
+          <p id="nxAppointmentFormSubtitle">
+            Fill in your details to request a booking.
+          </p>
+        </div>
+
+        <div id="nxAppointmentCalendarIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="16" rx="2"/>
+            <path d="M16 3v4M8 3v4M3 10h18"/>
+            <path d="M8 14h.01M12 14h.01M16 14h.01"/>
+          </svg>
+        </div>
+      </div>
+
+      <form id="nxAppointmentForm">
+
+        <div class="nxAppointmentField" id="nxPatientNameField">
+          <label for="nxPatientName">
+            Full Name <span class="nxAppointmentRequired">*</span>
+          </label>
+          <input type="text" id="nxPatientName" name="patientName"
+            placeholder="Enter your full name" autocomplete="name" required>
+        </div>
+
+        <div class="nxAppointmentField" id="nxPatientIdField">
+          <label for="nxPatientId">Patient ID</label>
+          <input type="text" id="nxPatientId" name="patientId"
+            placeholder="Existing patient ID, if available">
+        </div>
+
+        <div class="nxAppointmentField" id="nxPatientEmailField">
+          <label for="nxPatientEmail">
+            Email Address <span class="nxAppointmentRequired">*</span>
+          </label>
+          <input type="email" id="nxPatientEmail" name="patientEmail"
+            placeholder="you@example.com" autocomplete="email" required>
+        </div>
+
+        <div class="nxAppointmentField" id="nxPatientPhoneField">
+          <label for="nxPatientPhone">
+            Phone Number <span class="nxAppointmentRequired">*</span>
+          </label>
+          <input type="tel" id="nxPatientPhone" name="patientPhone"
+            placeholder="Enter your phone number" autocomplete="tel" required>
+        </div>
+
+        <div class="nxAppointmentField" id="nxScanTypeField">
+          <label for="nxScanType">
+            Imaging Service <span class="nxAppointmentRequired">*</span>
+          </label>
+          <select id="nxScanType" name="scanType" required>
+            <option value="" disabled selected>Select scan type</option>
+            <option value="MRI Scan">MRI Scan</option>
+            <option value="CT Scan">CT Scan</option>
+            <option value="Ultrasound Scan">Ultrasound Scan</option>
+            <option value="X-Ray">X-Ray</option>
+            <option value="Other">Other / Not Sure</option>
+          </select>
+        </div>
+
+        <div class="nxAppointmentField" id="nxReferringDoctorField">
+          <label for="nxReferringDoctor">Referring Doctor</label>
+          <input type="text" id="nxReferringDoctor" name="referringDoctor"
+            placeholder="Doctor's name (optional)">
+        </div>
+
+        <div class="nxAppointmentField" id="nxAppointmentDateField">
+          <label for="nxAppointmentDate">
+            Preferred Date <span class="nxAppointmentRequired">*</span>
+          </label>
+          <input type="date" id="nxAppointmentDate" name="appointmentDate" required>
+        </div>
+
+        <div class="nxAppointmentField" id="nxAppointmentTimeField">
+          <label for="nxAppointmentTime">
+            Preferred Time <span class="nxAppointmentRequired">*</span>
+          </label>
+          <select id="nxAppointmentTime" name="appointmentTime" required>
+            <option value="" disabled selected>Select a time</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="15:00">03:00 PM</option>
+            <option value="16:00">04:00 PM</option>
+            <option value="17:00">05:00 PM</option>
+          </select>
+        </div>
+
+        <div class="nxAppointmentField nxAppointmentFieldFull"
+             id="nxAppointmentMessageField">
+          <label for="nxAppointmentMessage">Additional Message</label>
+          <textarea id="nxAppointmentMessage" name="message" rows="3"
+            placeholder="Any appointment preferences? (Optional)"></textarea>
+        </div>
+
+        <div id="nxAppointmentStatus" role="status" aria-live="polite"></div>
+
+        <button type="submit" id="nxAppointmentSubmit">
+          <span id="nxAppointmentSubmitText">Request Appointment</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+        <p id="nxAppointmentPrivacy">
+          Your appointment request is subject to confirmation by our team.
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- SECTION 4: LOCATION & GOOGLE MAP -->
 <section class="nx-location-section" id="contact-location">
 
@@ -1042,7 +1275,7 @@
             </p>
 
             <div class="nx-final-cta-actions">
-                <a href="appointment.html" class="nx-final-cta-primary">
+                <a href="contact.html#nxAppointmentSection" class="nx-final-cta-primary">
                     Book an Appointment
                     <span aria-hidden="true">→</span>
                 </a>

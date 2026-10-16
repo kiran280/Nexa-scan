@@ -230,7 +230,7 @@
   border: 0;
   border-radius: 9px;
   background: linear-gradient(135deg, var(--blue), var(--green));
-  color: #fff;
+  color: white;
   font-weight: 700;
   cursor: pointer;
   transition: background var(--nx-transition), transform var(--nx-transition);
@@ -1029,125 +1029,6 @@
   font-size: 13px;
 }
 
-/* 9. NEWSLETTER */
-
-.nx-newsletter-section {
-  padding-top: 75px;
-  padding-bottom: 75px;
-  background: var(--nx-page);
-}
-
-.nx-newsletter-card {
-  display: grid;
-  grid-template-columns: auto 1fr 1.05fr;
-  align-items: center;
-  gap: 25px;
-  padding: 38px;
-  border: 1px solid var(--green);
-  border-radius: 30px;
-  background: var(--nx-card);
-  box-shadow: var(--nx-soft-shadow);
-}
-
-.nx-newsletter-icon {
-  display: grid;
-  width: 65px;
-  height: 65px;
-  place-items: center;
-  border-radius: 17px;
-  background: rgba(22,139,209,.1);
-  color: var(--blue);
-}
-
-.nx-newsletter-icon svg {
-  width: 30px;
-  height: 30px;
-}
-
-.nx-newsletter-copy .nx-eyebrow {
-  margin-bottom: 9px;
-  font-size: 12px;
-  letter-spacing: 1.3px;
-}
-
-.nx-newsletter-copy h2 {
-  margin: 0 0 8px;
-  font-size: clamp(21px, 2.1vw, 28px);
-  color: var(--green);
-}
-
-.nx-newsletter-copy p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.nx-newsletter-input-wrap {
-  display: flex;
-  min-height: 53px;
-  gap: 8px;
-  padding: 5px;
-  border: 1px solid var(--green);
-  border-radius: 9px;
-  background: var(--nx-surface);
-}
-
-.nx-newsletter-input-wrap input {
-  width: 100%;
-  min-width: 0;
-  padding: 0 10px;
-  border: 0;
-  outline: none;
-  background: transparent;
-  color: var(--nx-text);
-  font-size: 12px;
-}
-
-.nx-newsletter-input-wrap button {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 0 15px;
-  border: 0;
-  border-radius: 6px;
-  background: linear-gradient(135deg, var(--blue), var(--green));
-  color: white;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.nx-newsletter-input-wrap button:hover {
-    transform: translateY(-3px);
-}
-
-.nx-consent-label {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: 12px;
-  color: var(--nx-muted);
-  font-size: 11px;
-  line-height: 1.6;
-}
-
-.nx-consent-label input {
-  flex: 0 0 auto;
-  margin-top: 3px;
-  accent-color: var(--blue);
-}
-
-.nx-newsletter-message {
-  min-height: 0;
-  margin: 8px 0 0;
-  font-size: 12px;
-}
-
-.nx-newsletter-message:not(:empty) {
-  padding: 5px 0;
-}
 
 /* ACCESSIBILITY */
 

@@ -332,7 +332,7 @@
   border: 1.5px solid var(--blue);
   border-radius: 14px;
   color: var(--nexa-text);
-  background: var(--nexa-card);
+  background: var(--blue-light);
   box-shadow: var(--nexa-shadow);
 }
 
