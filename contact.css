@@ -129,14 +129,28 @@
 }
 
 .nx-contact-hero .nx-secondary-btn {
-  color: grey;
-  border-color: var(--green);
+  color: var(--blue);
+  border: 1.5px solid var(--green);
   background: transparent;
 }
 
 .nx-contact-hero .nx-secondary-btn:hover {
   color: var(--blue);
   border-color: var(--blue);
+  background: rgba(16, 168, 137, 0.08);
+}
+
+body.dark .nx-contact-hero .nx-secondary-btn,
+html[data-theme="dark"] .nx-contact-hero .nx-secondary-btn {
+  color: #ffffff;
+  border-color: var(--green);
+}
+
+body.dark .nx-contact-hero .nx-secondary-btn:hover,
+html[data-theme="dark"] .nx-contact-hero .nx-secondary-btn:hover {
+  border-color: var(--blue);
+  color: #ffffff;
+  background: rgba(16, 168, 137, 0.15);
 }
 
 .nx-hero-assurance {
@@ -756,7 +770,7 @@ body[dir="rtl"] .nx-hero-image-caption {
 
 .nx-contact-info-section {
     width: 100%;
-    padding: 100px 6%;
+    padding: 100px 0;
     box-sizing: border-box;
     background: #f4f9fd;
     color: #183047;
@@ -1261,7 +1275,7 @@ body[dir="rtl"] .nx-contact-info-card::before,
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding: 100px 6%;
+    padding: 100px 0;
     background: #f4f9fd;
     color: #18334b;
 }
@@ -1860,7 +1874,7 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 95px 24px;
+  padding: 95px 0;
   background: var(--nx-bg);
 }
 
@@ -1885,8 +1899,6 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
   grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
   align-items: center;
   gap: 60px;
-  margin-left: 60px;
-  margin-right: 60px;
 }
 
 /* ================= LEFT CONTENT ================= */
@@ -2324,7 +2336,7 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
 /* Tablets — 768px */
 @media (max-width: 768px) {
     #nxAppointmentSection {
-        padding: 60px 20px;
+        padding: 60px 0;
     }
 
     #nxAppointmentSection::before {
@@ -2408,7 +2420,7 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
 /* Large mobile phones — 576px */
 @media (max-width: 576px) {
     #nxAppointmentSection {
-        padding: 45px 16px;
+        padding: 45px 0;
     }
 
     #nxAppointmentContainer {
@@ -2583,8 +2595,8 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
 /* Very small screens — 320px */
 @media (max-width: 320px) {
     #nxAppointmentSection {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 0;
+        padding-left: 0;
     }
 
     #nxAppointmentHeading {
@@ -2649,7 +2661,7 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
 /* Default Light Theme */
 #nxAppointmentForm select,
 #nxAppointmentForm select option {
-    color: grey;
+    color: var(--nx-text, #102638);
 }
 
 #nxAppointmentForm select {
@@ -2661,6 +2673,7 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
     font-family: inherit;
     outline: none;
     cursor: pointer;
+    background-color: #ffffff;
     transition: border-color 0.3s ease,
                 box-shadow 0.3s ease,
                 background-color 0.3s ease;
@@ -2677,17 +2690,25 @@ body[data-bs-theme="dark"] .nx-ps-bottom {
 
 
 /* Dark Theme — Black Dropdown */
+body.dark #nxAppointmentForm select,
+html[data-theme="dark"] #nxAppointmentForm select,
 body.nx-dark #nxAppointmentForm select,
+body.dark #nxAppointmentForm select option,
+html[data-theme="dark"] #nxAppointmentForm select option,
 body.nx-dark #nxAppointmentForm select option {
     background-color: #000000 !important;
     color: #f5f7fb !important;
 }
 
+body.dark #nxAppointmentForm select,
+html[data-theme="dark"] #nxAppointmentForm select,
 body.nx-dark #nxAppointmentForm select {
     border-color: #292929;
     color-scheme: dark;
 }
 
+body.dark #nxAppointmentForm select:focus,
+html[data-theme="dark"] #nxAppointmentForm select:focus,
 body.nx-dark #nxAppointmentForm select:focus {
     border-color: var(--blue);
     box-shadow: 0 0 0 4px rgba(85, 170, 255, 0.15);
@@ -2698,6 +2719,8 @@ body.nx-dark #nxAppointmentForm select:focus {
     color: #7b8797;
 }
 
+body.dark #nxAppointmentForm select option[value=""],
+html[data-theme="dark"] #nxAppointmentForm select option[value=""],
 body.nx-dark #nxAppointmentForm select option[value=""] {
     background-color: #000000 !important;
     color: #b5bfcc !important;
@@ -2733,7 +2756,7 @@ body.nx-dark #nxAppointmentForm select option[value=""] {
 .nx-location-section {
    
     width: 100%;
-    padding: 100px 6%;
+    padding: 100px 0;
     overflow: hidden;
     background: #f3f8fc;
     color: #193249;
@@ -3288,7 +3311,7 @@ body[dir="rtl"] .nx-location-arrow {
 ========================================= */
 
 .nx-contact-faq {
-    padding: 70px 6%;
+    padding: 70px 0;
     background: #ffffff;
     color: #193249;
     font-family: inherit;
@@ -3695,7 +3718,7 @@ body[dir="rtl"] .nx-contact-faq-cta span {
 
 @media (max-width: 1000px) {
     .nx-contact-faq {
-        padding: 85px 4%;
+        padding: 85px 0;
     }
 
     .nx-contact-faq-layout {
@@ -3736,7 +3759,7 @@ body[dir="rtl"] .nx-contact-faq-cta span {
 
 @media (max-width: 480px) {
     .nx-contact-faq {
-        padding: 65px 17px;
+        padding: 65px 0;
     }
 
     .nx-contact-faq-heading {
@@ -3783,8 +3806,8 @@ body[dir="rtl"] .nx-contact-faq-cta span {
 
 @media (max-width: 360px) {
     .nx-contact-faq {
-        padding-right: 12px;
-        padding-left: 12px;
+        padding-right: 0;
+        padding-left: 0;
     }
 
     .nx-contact-faq-question {
@@ -3832,7 +3855,7 @@ body[dir="rtl"] .nx-contact-faq-cta span {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding: 55px 6%;
+    padding: 55px 0;
     background: #f2f9fd;
     color: #17334b;
     text-align: center;

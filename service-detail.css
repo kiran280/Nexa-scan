@@ -74,7 +74,8 @@
 }
 
 .nx-container {
-  width: min(1100px, calc(100% - 48px));
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin-inline: auto;
 }
 
@@ -143,13 +144,14 @@
 
 .nx-btn-outline {
   background: transparent;
-  color: black !important;
-  border-color: var(--green);
+  color: var(--blue) !important;
+  border: 1.5px solid var(--green) !important;
 }
 
 .nx-btn-outline:hover {
-  border-color: var(--blue);
+  border-color: var(--blue) !important;
   color: var(--blue) !important;
+  background: rgba(16, 168, 137, 0.08) !important;
 }
 
 /* Hero */
@@ -1293,15 +1295,18 @@ body.dark .nx-service-page .nx-tech-caption span {
 }
 
 /* Outline buttons */
-body.dark .nx-service-page .nx-btn-outline {
-    background: #000000 !important;
+body.dark .nx-service-page .nx-btn-outline,
+html[data-theme="dark"] .nx-service-page .nx-btn-outline {
+    background: transparent !important;
     color: #ffffff !important;
-    border-color: var(--blue) !important;
+    border: 1.5px solid var(--green) !important;
 }
 
-body.dark .nx-service-page .nx-btn-outline:hover {
-    border-color: #1677dc !important;
-    color: #55aaff !important;
+body.dark .nx-service-page .nx-btn-outline:hover,
+html[data-theme="dark"] .nx-service-page .nx-btn-outline:hover {
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+    background: rgba(16, 168, 137, 0.15) !important;
 }
 
 /* FAQ question and answer area */

@@ -14,7 +14,7 @@
 
 .nx-detail-page img { display: block; max-width: 100%; }
 .nx-detail-page a { color: inherit; text-decoration: none; }
-.nx-detail-container { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+.nx-detail-container { width: min(1200px, 92%); max-width: 1200px; margin-inline: auto; }
 
 .nx-detail-page h1,
 .nx-detail-page h2,

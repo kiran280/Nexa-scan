@@ -68,7 +68,8 @@
 }
 
 .nx-blog-container {
-  width: min(1050px, calc(100% - 64px));
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin-inline: auto;
 }
 

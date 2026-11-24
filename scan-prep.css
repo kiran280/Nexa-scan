@@ -5,7 +5,8 @@
 
 
 .sp-container {
-  width: min(1120px, calc(100% - 48px));
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin-inline: auto;
 }
 
@@ -147,7 +148,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 65px 6% 30px;
+  padding: 65px 0 30px;
   background: var(--nx-bg);
   color: var(--nx-text);
   transition: background .4s ease, color .4s ease;
@@ -184,8 +185,8 @@
 }
 
 .nx-hero-container {
-  width: 100%;
-  max-width: 1120px;
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -340,16 +341,30 @@
 }
 
 .nx-btn-outline {
-  border-color: var(--green);
-  color: var(--nx-primary);
+  border: 1.5px solid var(--green);
+  color: var(--blue);
   background: transparent;
 }
 
 .nx-btn-outline:hover {
   color: var(--blue);
-  background: var(--nx-muted);
+  background: rgba(16, 168, 137, 0.08);
   transform: translateY(-4px);
   border-color: var(--blue);
+}
+
+body.dark .nx-btn-outline,
+html[data-theme="dark"] .nx-btn-outline {
+  color: #ffffff;
+  border-color: var(--green);
+  background: transparent;
+}
+
+body.dark .nx-btn-outline:hover,
+html[data-theme="dark"] .nx-btn-outline:hover {
+  color: #ffffff;
+  border-color: var(--blue);
+  background: rgba(16, 168, 137, 0.15);
 }
 
 .nx-btn-arrow {
@@ -564,7 +579,8 @@
 ========================================== */
 
 .nx-hero-trust {
-  max-width: 1450px;
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin: 65px auto 0;
   padding: 25px 20px;
   display: grid;
@@ -1157,8 +1173,8 @@ body[dir="rtl"] .nx-btn-primary:hover .nx-btn-arrow,
 /* Very small phones — 320px to 360px */
 @media (max-width: 360px) {
   .nx-hero {
-    padding-right: 13px;
-    padding-left: 13px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .nx-hero-content h1 {
@@ -1814,7 +1830,7 @@ body[dir="rtl"] .nx-btn-primary:hover .nx-btn-arrow,
   height: 490px;
   border-radius: 24px;
   object-fit: cover;
-  box-shadow: var(--blue);
+  box-shadow: 0 16px 36px rgba(8, 105, 181, 0.16);
 }
 
 .sp-image-caption {

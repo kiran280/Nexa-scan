@@ -292,7 +292,7 @@
           modern technology, and a patient-focused approach to your care.
         </p>
         <div class="nx-hero-actions">
-          <a href="appointment.html" class="nx-btn nx-btn-primary">Book an Appointment <span>↗</span></a>
+          <a href="contact.html#nxAppointmentSection" class="nx-btn nx-btn-primary">Book an Appointment <span>↗</span></a>
           <a href="#nx-overview" class="nx-btn nx-btn-outline">Explore MRI Services</a>
         </div>
         <div class="nx-trust-row">
@@ -1015,14 +1015,19 @@ const savedTheme = localStorage.getItem("aquascape-theme");
  
 if (savedTheme === "dark") {
     body.classList.add("dark");
+    document.documentElement.setAttribute("data-theme", "dark");
+} else {
+    document.documentElement.setAttribute("data-theme", "light");
 }
  
  
  
 themeBtn.addEventListener("click", function () {
     body.classList.toggle("dark");
+    const isDark = body.classList.contains("dark");
+    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
  
-    if (body.classList.contains("dark")) {
+    if (isDark) {
         localStorage.setItem("aquascape-theme", "dark");
     } else {
         localStorage.setItem("aquascape-theme", "light");

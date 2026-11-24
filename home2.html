@@ -631,7 +631,7 @@
       </article>
       <article class="nexa-tech-card">
         <div class="nexa-tech-image">
-          <img src="images/home2 ultasound.jpg" alt="Clinical diagnostic environment" loading="lazy">
+          <img src="images/services ultrasound.jpg" alt="Clinical diagnostic ultrasound examination" loading="lazy">
           <span>03 / ULTRASOUND</span>
         </div>
         <div class="nexa-tech-copy"><h3>Ultrasound</h3><p>Real-time imaging using sound waves for appropriate diagnostic examinations.</p></div>
@@ -1291,14 +1291,19 @@ const savedTheme = localStorage.getItem("aquascape-theme");
  
 if (savedTheme === "dark") {
     body.classList.add("dark");
+    document.documentElement.setAttribute("data-theme", "dark");
+} else {
+    document.documentElement.setAttribute("data-theme", "light");
 }
  
  
  
 themeBtn.addEventListener("click", function () {
     body.classList.toggle("dark");
+    const isDark = body.classList.contains("dark");
+    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
  
-    if (body.classList.contains("dark")) {
+    if (isDark) {
         localStorage.setItem("aquascape-theme", "dark");
     } else {
         localStorage.setItem("aquascape-theme", "light");

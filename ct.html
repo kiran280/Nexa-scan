@@ -298,7 +298,7 @@
         </p>
 
         <div class="nx-hero-actions">
-          <a href="appointment.html" class="nx-btn nx-btn-primary">
+          <a href="contact.html#nxAppointmentSection" class="nx-btn nx-btn-primary">
             Book a CT Scan <span>↗</span>
           </a>
           <a href="#ct-overview" class="nx-btn nx-btn-outline">
@@ -1261,14 +1261,19 @@ const savedTheme = localStorage.getItem("aquascape-theme");
  
 if (savedTheme === "dark") {
     body.classList.add("dark");
+    document.documentElement.setAttribute("data-theme", "dark");
+} else {
+    document.documentElement.setAttribute("data-theme", "light");
 }
  
  
  
 themeBtn.addEventListener("click", function () {
     body.classList.toggle("dark");
+    const isDark = body.classList.contains("dark");
+    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
  
-    if (body.classList.contains("dark")) {
+    if (isDark) {
         localStorage.setItem("aquascape-theme", "dark");
     } else {
         localStorage.setItem("aquascape-theme", "light");

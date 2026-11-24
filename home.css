@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
     min-height: 400px;
-    padding: 10px 6%;
+    padding: 55px 0;
     overflow: hidden;
     background: #F5FAFE;
     color: var(--blue-light);
@@ -21,8 +21,8 @@
 }
 
 .nx-hero-container {
-    width: 100%;
-    max-width: 1400px;
+    width: min(1200px, 92%);
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
@@ -121,13 +121,15 @@
 }
 
 .nx-secondary-btn {
-    color: grey;
-    border: 1px solid var(--green);
+    color: var(--blue);
+    background: transparent;
+    border: 1.5px solid var(--green);
 }
 
 .nx-secondary-btn:hover {
     border-color: var(--blue);
-    color: var(--blue);
+    color: var(--blue-dark);
+    background: rgba(8, 105, 181, 0.08);
     transform: translateY(-3px);
 }
 
@@ -342,6 +344,10 @@
 ========================================== */
 
 /* Main hero background */
+body.dark .nx-hero,
+body.dark .nx-hero-container,
+body.dark .nx-hero-content,
+body.dark .nx-hero-visual,
 html[data-theme="dark"] .nx-hero,
 html[data-theme="dark"] .nx-hero-container,
 html[data-theme="dark"] .nx-hero-content,
@@ -352,62 +358,74 @@ html[data-theme="dark"] .nx-hero-visual {
 }
 
 /* Hero heading */
+body.dark .nx-hero h1,
 html[data-theme="dark"] .nx-hero h1 {
     color: #ffffff !important;
 }
 
+body.dark .nx-hero h1 span,
 html[data-theme="dark"] .nx-hero h1 span {
     color: #39bde9 !important;
 }
 
 /* Description */
+body.dark .nx-hero-description,
 html[data-theme="dark"] .nx-hero-description {
-    color: #d0d0d0 !important;
+    color: #c5d0dc !important;
 }
 
 /* Eyebrow label */
+body.dark .nx-eyebrow,
 html[data-theme="dark"] .nx-eyebrow {
-    background: #000000 !important;
+    background: #0d1620 !important;
     color: #55d8bb !important;
-    border: 1px solid #333333 !important;
+    border: 1px solid #1a2a38 !important;
     box-shadow: none !important;
 }
 
 /* Benefit labels */
+body.dark .nx-benefit,
 html[data-theme="dark"] .nx-benefit {
     color: #e0e0e0 !important;
 }
 
+body.dark .nx-benefit-icon,
 html[data-theme="dark"] .nx-benefit-icon {
     color: #10a889 !important;
 }
 
 /* Primary button */
+body.dark .nx-primary-btn,
 html[data-theme="dark"] .nx-primary-btn {
-    background: #0869b5 !important;
+    background: linear-gradient(135deg, var(--blue), var(--green)) !important;
     color: #ffffff !important;
-    border-color: #0869b5 !important;
+    border: none !important;
 }
 
+body.dark .nx-primary-btn:hover,
 html[data-theme="dark"] .nx-primary-btn:hover {
-    background: #064f8a !important;
+    background: linear-gradient(135deg, var(--blue-dark), var(--green-dark)) !important;
     color: #ffffff !important;
+    box-shadow: 0 12px 25px rgba(8, 105, 181, 0.35) !important;
 }
 
 /* Secondary button */
+body.dark .nx-secondary-btn,
 html[data-theme="dark"] .nx-secondary-btn {
-    background: #000000 !important;
-    color: #ffff !important;
-    border: 1px solid #444444 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+    border: 1.5px solid var(--green) !important;
 }
 
+body.dark .nx-secondary-btn:hover,
 html[data-theme="dark"] .nx-secondary-btn:hover {
-    background: #111111 !important;
+    background: rgba(16, 168, 137, 0.15) !important;
     color: #55d8bb !important;
-    border-color: #10a889 !important;
+    border-color: #55d8bb !important;
 }
 
 /* Image frame */
+body.dark .nx-image-frame,
 html[data-theme="dark"] .nx-image-frame {
     background: #000000 !important;
     border: 1px solid #222222 !important;
@@ -415,41 +433,50 @@ html[data-theme="dark"] .nx-image-frame {
 }
 
 /* Keep the image visible */
+body.dark .nx-hero-image,
 html[data-theme="dark"] .nx-hero-image {
     display: block;
     opacity: 1 !important;
 }
 
 /* Image caption */
+body.dark .nx-image-caption,
 html[data-theme="dark"] .nx-image-caption {
     color: #ffffff !important;
 }
 
+body.dark .nx-image-caption strong,
 html[data-theme="dark"] .nx-image-caption strong {
     color: #ffffff !important;
 }
 
+body.dark .nx-image-caption small,
 html[data-theme="dark"] .nx-image-caption small {
     color: #dddddd !important;
 }
 
 /* Floating information card */
+body.dark .nx-floating-card,
 html[data-theme="dark"] .nx-floating-card {
-    background: #111111 !important;
+    background: #0e1620 !important;
     color: #ffffff !important;
-    border: 1px solid #333333 !important;
+    border: 1px solid #203040 !important;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7) !important;
 }
 
+body.dark .nx-floating-text strong,
 html[data-theme="dark"] .nx-floating-text strong {
     color: #ffffff !important;
 }
 
+body.dark .nx-floating-text small,
 html[data-theme="dark"] .nx-floating-text small {
-    color: #cccccc !important;
+    color: #b0c0d0 !important;
 }
 
 /* Floating icons */
+body.dark .nx-floating-icon,
+body.dark .nx-floating-check,
 html[data-theme="dark"] .nx-floating-icon,
 html[data-theme="dark"] .nx-floating-check {
     background: #102a24 !important;
@@ -457,12 +484,15 @@ html[data-theme="dark"] .nx-floating-check {
 }
 
 /* Decorative shapes */
+body.dark .nx-image-decoration,
 html[data-theme="dark"] .nx-image-decoration {
     background: #000000 !important;
     opacity: 0 !important;
 }
 
 /* Prevent inherited pseudo-element backgrounds */
+body.dark .nx-hero::before,
+body.dark .nx-hero::after,
 html[data-theme="dark"] .nx-hero::before,
 html[data-theme="dark"] .nx-hero::after {
     background: #000000 !important;
@@ -507,6 +537,96 @@ html.dark .nx-hero-visual {
     color: #ffffff !important;
 }
 
+/* Dark theme enhancements for home sections */
+body.dark .nx-trust-section,
+html[data-theme="dark"] .nx-trust-section {
+    background: #000000 !important;
+}
+
+body.dark .nx-trust-item,
+html[data-theme="dark"] .nx-trust-item {
+    background: #080808;
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+body.dark .nx-icon-box,
+html[data-theme="dark"] .nx-icon-box {
+    background: #101F2B;
+    color: #39bde9;
+}
+
+body.dark .nx-services-section,
+html[data-theme="dark"] .nx-services-section,
+body.dark .nx-why-section,
+html[data-theme="dark"] .nx-why-section,
+body.dark .nx-journey-section,
+html[data-theme="dark"] .nx-journey-section,
+body.dark .nx-preparation-section,
+html[data-theme="dark"] .nx-preparation-section,
+body.dark .nx-gallery-section,
+html[data-theme="dark"] .nx-gallery-section,
+body.dark .nx-appointment-section,
+html[data-theme="dark"] .nx-appointment-section {
+    background: #000000 !important;
+}
+
+body.dark .nx-service-card,
+html[data-theme="dark"] .nx-service-card,
+body.dark .nx-journey-card,
+html[data-theme="dark"] .nx-journey-card {
+    background: #080808;
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+body.dark .nx-service-card:hover,
+html[data-theme="dark"] .nx-service-card:hover,
+body.dark .nx-journey-card:hover,
+html[data-theme="dark"] .nx-journey-card:hover {
+    border-color: var(--green);
+}
+
+body.dark .nx-service-content a,
+html[data-theme="dark"] .nx-service-content a {
+    color: #39bde9;
+}
+
+body.dark .nx-journey-icon,
+html[data-theme="dark"] .nx-journey-icon {
+    background: #101F2B;
+    border-color: rgba(255, 255, 255, 0.14);
+    color: #39bde9;
+}
+
+body.dark .nx-step-number,
+html[data-theme="dark"] .nx-step-number {
+    color: rgba(57, 189, 233, 0.4);
+}
+
+body.dark .nx-image-note,
+html[data-theme="dark"] .nx-image-note {
+    background: #0d1620;
+    border-color: rgba(255, 255, 255, 0.14);
+    color: #55d8bb;
+}
+
+body.dark .nx-why-point > span,
+html[data-theme="dark"] .nx-why-point > span {
+    background: #102A24;
+    color: #55D8BB;
+}
+
+body.dark .nx-section-label,
+html[data-theme="dark"] .nx-section-label {
+    color: #39bde9;
+}
+
+body.dark .nx-preparation-badge,
+html[data-theme="dark"] .nx-preparation-badge {
+    background: #0d1620;
+    border-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
+
 
 
 /* ================= RESPONSIVE DESIGN ================= */
@@ -539,117 +659,168 @@ html.dark .nx-hero-visual {
 
 @media (max-width: 850px) {
     .nx-hero {
-        padding: 65px 6%;
+        padding: 55px 0;
+        min-height: auto;
     }
 
     .nx-hero-container {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 38px;
     }
 
     .nx-hero-content {
-        max-width: 700px;
+        max-width: 100%;
     }
 
     .nx-hero h1 {
-        font-size: clamp(40px, 7vw, 58px);
+        font-size: clamp(34px, 5.2vw, 44px);
+        line-height: 1.18;
+        letter-spacing: -1.2px;
+        margin-bottom: 20px;
     }
 
     .nx-hero-description {
         max-width: 650px;
+        font-size: 15px;
+        line-height: 1.85;
+        margin-bottom: 24px;
     }
 
     .nx-hero-visual {
         width: 100%;
         max-width: 650px;
         margin: 0 auto;
-        padding: 15px 12px 25px;
+        padding: 10px 0 20px;
     }
 
     .nx-image-frame {
-        height: 430px;
+        height: 390px;
+    }
+
+    .nx-image-caption {
+        left: 20px;
+        bottom: 18px;
+        max-width: calc(100% - 250px);
     }
 
     .nx-floating-card {
-        right: 0;
-        bottom: 45px;
+        right: 15px;
+        bottom: 18px;
+        max-width: 230px;
+        min-width: 0;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nx-hero {
+        padding: 50px 0;
+    }
+
+    .nx-hero-container {
+        gap: 34px;
+    }
+
+    .nx-hero h1 {
+        font-size: clamp(30px, 4.8vw, 38px);
+    }
+
+    .nx-image-frame {
+        height: 360px;
     }
 }
 
 @media (max-width: 550px) {
     .nx-hero {
         min-height: auto;
-        padding: 48px 20px;
+        padding: 38px 0;
     }
 
     .nx-hero-container {
-        gap: 32px;
+        gap: 26px;
+        width: 100%;
+    }
+
+    .nx-hero-content {
+        width: 100%;
+        max-width: 100%;
     }
 
     .nx-eyebrow {
-        margin-bottom: 19px;
-        padding: 8px 11px;
+        margin-bottom: 14px;
+        padding: 7px 11px;
         font-size: 10px;
         letter-spacing: 0.8px;
     }
 
     .nx-hero h1 {
-        margin-bottom: 19px;
-        font-size: clamp(33px, 9vw, 43px);
-        line-height: 1.18;
-        letter-spacing: -1px;
+        margin-bottom: 16px;
+        font-size: clamp(24px, 7.5vw, 30px);
+        line-height: 1.22;
+        letter-spacing: -0.6px;
+        word-break: break-word;
+    }
+
+    .nx-hero h1 span {
+        margin-top: 6px;
     }
 
     .nx-hero-description {
-        margin-bottom: 24px;
-        font-size: 14px;
-        line-height: 1.8;
+        margin-bottom: 22px;
+        font-size: 13.5px;
+        line-height: 1.75;
+        max-width: 100%;
     }
 
     .nx-hero-buttons {
         align-items: stretch;
         flex-direction: column;
         gap: 12px;
-        margin-bottom: 27px;
+        margin-bottom: 24px;
+        width: 100%;
     }
 
     .nx-primary-btn,
     .nx-secondary-btn {
         width: 100%;
-        min-height: 52px;
-        padding: 0 14px;
+        min-height: 48px;
+        padding: 0 16px;
         font-size: 13px;
+        border-radius: 8px;
     }
 
     .nx-benefits {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 13px;
+        gap: 10px;
     }
 
     .nx-benefit {
-        font-size: 12px;
+        font-size: 12.5px;
     }
 
     .nx-hero-visual {
-        padding: 12px 5px 25px;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
     }
 
     .nx-image-frame {
-        height: 320px;
-        border-width: 5px;
+        height: 250px;
+        border-width: 4px;
         border-radius: 16px;
     }
 
     .nx-image-caption {
-        left: 15px;
-        right: 15px;
-        bottom: 16px;
-        gap: 10px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        gap: 8px;
     }
 
     .nx-image-caption strong {
-        font-size: 13px;
+        font-size: 12px;
+        margin-bottom: 2px;
     }
 
     .nx-image-caption small {
@@ -657,18 +828,22 @@ html.dark .nx-hero-visual {
     }
 
     .nx-floating-card {
-        right: -2px;
-        bottom: 35px;
+        position: static;
+        margin-top: 14px;
+        right: auto;
+        bottom: auto;
         min-width: 0;
-        width: min(270px, calc(100% - 10px));
-        padding: 12px;
-        gap: 9px;
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 14px;
+        gap: 10px;
+        box-shadow: 0 6px 20px rgba(16, 52, 78, 0.08);
     }
 
     .nx-floating-icon {
-        width: 39px;
-        height: 39px;
-        min-width: 39px;
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
     }
 
     .nx-floating-text strong {
@@ -685,14 +860,51 @@ html.dark .nx-hero-visual {
         min-width: 20px;
     }
 
-    .nx-decoration-one {
-        width: 85px;
-        height: 85px;
+    .nx-image-decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .nx-hero {
+        padding: 30px 0;
     }
 
-    .nx-decoration-two {
-        width: 95px;
-        height: 95px;
+    .nx-hero-container {
+        gap: 22px;
+    }
+
+    .nx-eyebrow {
+        font-size: 9.5px;
+        padding: 6px 9px;
+        letter-spacing: 0.6px;
+    }
+
+    .nx-hero h1 {
+        font-size: 23px;
+        line-height: 1.22;
+        letter-spacing: -0.5px;
+    }
+
+    .nx-hero-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .nx-image-frame {
+        height: 215px;
+        border-width: 3px;
+        border-radius: 14px;
+    }
+
+    .nx-primary-btn,
+    .nx-secondary-btn {
+        min-height: 46px;
+        font-size: 12.5px;
+    }
+
+    .nx-floating-card {
+        padding: 10px 12px;
     }
 }
 
@@ -710,15 +922,15 @@ html.dark .nx-hero-visual {
 
 .nx-section {
     width: 100%;
-    padding: 85px 6%;
+    padding: 85px 0;
     background: var(--nx-bg);
     color: var(--nx-text);
     transition: background var(--nx-transition), color var(--nx-transition);
 }
 
 .nx-container {
-    width: 100%;
-    max-width: 1280px;
+    width: min(1200px, 92%);
+    max-width: 1200px;
     margin-inline: auto;
 }
 
@@ -789,7 +1001,7 @@ html[data-theme="dark"] .nx-section-label {
     height: 470px;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: var(--blue);
+    box-shadow: 0 16px 36px rgba(8, 105, 181, 0.16);
     border: 1px solid var(--blue);
 }
 
@@ -1237,7 +1449,7 @@ html[data-theme="dark"] .nx-journey-icon {
     object-fit: cover;
     border-radius: 20px;
     border: 1px solid var(--blue);
-    box-shadow: var(--green);
+    box-shadow: 0 16px 36px rgba(16, 168, 137, 0.16);
 }
 
 .nx-preparation-badge {
@@ -1396,27 +1608,29 @@ html[data-theme="dark"] .nx-journey-icon {
 }
 
 .nx-btn-light {
-    border: 1px solid var(--green);
-    color: black;
-    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .nx-btn-light:hover {
-    background: rgba(255, 255, 255, 0.12);
-    color: white;
+    background: #ffffff;
+    color: var(--blue-dark);
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .nx-btn-outline {
-    border-color: var(--green);
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
     background: transparent;
-    color: black;
+    color: #ffffff;
 }
 
 .nx-btn-outline:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: var(--blue);
-    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 .nx-appointment-art {
@@ -1479,7 +1693,7 @@ html[data-theme="dark"] .nx-journey-icon {
 
 @media (max-width: 1024px) {
     .nx-section {
-        padding: 70px 4%;
+        padding: 70px 0;
     }
 
     .nx-trust-grid {
@@ -1544,7 +1758,7 @@ html[data-theme="dark"] .nx-journey-icon {
 
 @media (max-width: 768px) {
     .nx-section {
-        padding: 60px 5%;
+        padding: 60px 0;
     }
 
     .nx-section-heading {
@@ -1625,7 +1839,7 @@ html[data-theme="dark"] .nx-journey-icon {
 
 @media (max-width: 550px) {
     .nx-section {
-        padding: 48px 20px;
+        padding: 48px 0;
     }
 
     .nx-section-heading h2,
@@ -1793,7 +2007,7 @@ html[data-theme="dark"] .nx-journey-icon {
 
 @media (max-width: 360px) {
     .nx-section {
-        padding: 40px 15px;
+        padding: 40px 0;
     }
 
     .nx-section-heading h2,

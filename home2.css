@@ -9,7 +9,7 @@ max-height: 950px;
 overflow: hidden; 
 background: #05090f; 
 color: #ffffff; 
-padding: 10px 8%; 
+padding: 10px 0; 
 }
 
 /* Background image */
@@ -83,8 +83,9 @@ padding: 10px 8%;
 /* Main content */
 
 .nexa-premium-hero .nexa-hero-content {
-  width: 100%;
-  max-width: 780px;
+  width: min(1200px, 92%);
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
   animation: nexaContentEnter 1s 0.15s ease both;
@@ -205,17 +206,17 @@ padding: 10px 8%;
 }
 
 .nexa-premium-hero .nexa-btn-secondary {
-  color: grey;
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid var(--green);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid var(--green);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
 .nexa-premium-hero .nexa-btn-secondary:hover {
   border-color: var(--blue);
-  color: var(--blue);
-  background: rgba(42, 190, 204, 0.12);
+  color: #ffffff;
+  background: rgba(8, 105, 181, 0.25);
 }
 
 /* Trust highlights */
@@ -384,11 +385,15 @@ padding: 10px 8%;
    Add class="light-theme" to body
 ================================ */
 
+body:not(.dark) .nexa-premium-hero,
+html[data-theme="light"] .nexa-premium-hero,
 body.light-theme .nexa-premium-hero {
   background: #edf7fc;
   color: #102638;
 }
 
+body:not(.dark) .nexa-premium-hero .nexa-hero-overlay,
+html[data-theme="light"] .nexa-premium-hero .nexa-hero-overlay,
 body.light-theme .nexa-premium-hero .nexa-hero-overlay {
   background:
     linear-gradient(
@@ -400,10 +405,14 @@ body.light-theme .nexa-premium-hero .nexa-hero-overlay {
     );
 }
 
+body:not(.dark) .nexa-premium-hero h1,
+html[data-theme="light"] .nexa-premium-hero h1,
 body.light-theme .nexa-premium-hero h1 {
   color: #102638;
 }
 
+body:not(.dark) .nexa-premium-hero h1 span,
+html[data-theme="light"] .nexa-premium-hero h1 span,
 body.light-theme .nexa-premium-hero h1 span {
   background-image: linear-gradient(
     100deg,
@@ -413,29 +422,51 @@ body.light-theme .nexa-premium-hero h1 span {
   );
 }
 
+body:not(.dark) .nexa-premium-hero .nexa-hero-description,
+html[data-theme="light"] .nexa-premium-hero .nexa-hero-description,
 body.light-theme .nexa-premium-hero .nexa-hero-description {
   color: #3d566a;
 }
 
+body:not(.dark) .nexa-premium-hero .nexa-trust-item strong,
+html[data-theme="light"] .nexa-premium-hero .nexa-trust-item strong,
 body.light-theme .nexa-premium-hero .nexa-trust-item strong {
   color: #102638;
 }
 
+body:not(.dark) .nexa-premium-hero .nexa-trust-item small,
+html[data-theme="light"] .nexa-premium-hero .nexa-trust-item small,
 body.light-theme .nexa-premium-hero .nexa-trust-item small {
   color: #4f6576;
 }
 
+body:not(.dark) .nexa-premium-hero .nexa-btn-secondary,
+html[data-theme="light"] .nexa-premium-hero .nexa-btn-secondary,
 body.light-theme .nexa-premium-hero .nexa-btn-secondary {
-  color: #102638;
-  border-color: rgba(16, 38, 56, 0.3);
-  background: rgba(255, 255, 255, 0.65);
+  color: var(--blue);
+  border: 1.5px solid var(--green);
+  background: rgba(255, 255, 255, 0.85);
 }
 
+body:not(.dark) .nexa-premium-hero .nexa-btn-secondary:hover,
+html[data-theme="light"] .nexa-premium-hero .nexa-btn-secondary:hover,
+body.light-theme .nexa-premium-hero .nexa-btn-secondary:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: #ffffff;
+}
+
+body:not(.dark) .nexa-premium-hero .nexa-hero-side-note,
+body:not(.dark) .nexa-premium-hero .nexa-hero-scroll,
+html[data-theme="light"] .nexa-premium-hero .nexa-hero-side-note,
+html[data-theme="light"] .nexa-premium-hero .nexa-hero-scroll,
 body.light-theme .nexa-premium-hero .nexa-hero-side-note,
 body.light-theme .nexa-premium-hero .nexa-hero-scroll {
   color: #38566a;
 }
 
+body:not(.dark) .nexa-premium-hero .nexa-hero-badge,
+html[data-theme="light"] .nexa-premium-hero .nexa-hero-badge,
 body.light-theme .nexa-premium-hero .nexa-hero-badge {
   color: #126b78;
   background: rgba(224, 248, 249, 0.86);
@@ -517,9 +548,9 @@ body[dir="rtl"] .nexa-premium-hero .nexa-hero-side-note {
 @media (max-width: 768px) {
   .nexa-premium-hero {
     height: auto;
-    min-height: 720px;
+    min-height: auto;
     max-height: none;
-    padding: 110px 6% 95px;
+    padding: 85px 5% 70px;
     align-items: center;
   }
 
@@ -651,6 +682,31 @@ body[dir="rtl"] .nexa-premium-hero .nexa-hero-side-note {
   }
 }
 
+@media (max-width: 360px) {
+  .nexa-premium-hero {
+    min-height: auto;
+    padding: 70px 14px 45px;
+  }
+
+  .nexa-premium-hero h1 {
+    font-size: clamp(23px, 7.5vw, 29px);
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+  }
+
+  .nexa-premium-hero .nexa-hero-badge {
+    font-size: 8px;
+    letter-spacing: 1px;
+    padding: 7px 10px;
+  }
+
+  .nexa-premium-hero .nexa-hero-description {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+}
+
 /* Respect reduced-motion preferences */
 
 @media (prefers-reduced-motion: reduce) {
@@ -683,7 +739,7 @@ body[dir="rtl"] .nexa-premium-hero .nexa-hero-side-note {
   position: relative;
   isolation: isolate;
   width: 100%;
-  padding: 80px 24px;
+  padding: 80px 0;
   overflow: hidden;
   background: var(--np-bg);
   color: var(--np-heading);
@@ -697,8 +753,8 @@ body[dir="rtl"] .nexa-premium-hero .nexa-hero-side-note {
 }
 
 .nexa-premium-container {
-  width: 100%;
-  max-width: 1050px;
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -1160,7 +1216,7 @@ html[dir="rtl"] .nexa-premium-link:hover span {
 /* Very small mobile screens */
 @media (max-width: 360px) {
   .nexa-premium-services {
-    padding: 48px 12px;
+    padding: 48px 0;
   }
 
   .nexa-premium-heading h2 {
@@ -1195,7 +1251,7 @@ html[dir="rtl"] .nexa-premium-link:hover span {
 /* Wide monitors */
 @media (min-width: 1500px) {
   .nexa-premium-services {
-    padding: 115px 32px;
+    padding: 115px 0;
   }
 
   .nexa-premium-grid {
@@ -1238,7 +1294,7 @@ html[dir="rtl"] .nexa-premium-link:hover span {
   position: relative;
   isolation: isolate;
   width: 100%;
-  padding: 95px 24px;
+  padding: 95px 0;
   overflow: hidden;
   background: var(--nexa-bg);
   color: var(--nexa-heading);
@@ -1256,8 +1312,8 @@ html[dir="rtl"] .nexa-premium-link:hover span {
 }
 
 .nexa-wrap {
-  width: 100%;
-  max-width: 1050px;
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -2028,7 +2084,7 @@ html[dir="rtl"] .nexa-button span {
   align-items: center;
   width: 100%;
   max-height: 500px;
-  padding: 30px 6%;
+  padding: 30px 0;
   overflow: hidden;
   color: var(--cta-text);
   background-color: #07131e;
@@ -2065,8 +2121,8 @@ html[dir="rtl"] .nexa-button span {
 }
 
 .nexa-home2-cta-container {
-  width: 100%;
-  max-width: 1350px;
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -2246,7 +2302,7 @@ html[dir="rtl"] .nexa-home2-cta-overlay {
 @media (max-width: 1024px) {
   .nexa-home2-cta {
     min-height: 620px;
-    padding: 75px 5%;
+    padding: 75px 0;
     background-position: 58% center;
   }
 
@@ -2266,7 +2322,7 @@ html[dir="rtl"] .nexa-home2-cta-overlay {
 @media (max-width: 768px) {
   .nexa-home2-cta {
     min-height: auto;
-    padding: 75px 24px 55px;
+    padding: 75px 0 55px;
     background-position: 62% center;
   }
 
@@ -2297,7 +2353,7 @@ html[dir="rtl"] .nexa-home2-cta-overlay {
 
 @media (max-width: 480px) {
   .nexa-home2-cta {
-    padding: 58px 18px 38px;
+    padding: 58px 0 38px;
     background-position: 60% center;
   }
 
@@ -2456,7 +2512,7 @@ html[dir="rtl"] .nexa-home2-cta-overlay {
 /* Mobile and portrait tablets */
 @media (max-width: 650px) {
   .nexa-section {
-    padding: 60px 17px;
+    padding: 60px 0;
   }
 
   .nexa-section-heading {
@@ -2525,7 +2581,7 @@ html[dir="rtl"] .nexa-home2-cta-overlay {
   }
 
   .nexa-appointment {
-    padding: 0 17px 60px;
+    padding: 0 0 60px;
   }
 
   .nexa-appointment-inner {
@@ -2553,7 +2609,7 @@ html[dir="rtl"] .nexa-home2-cta-overlay {
 /* Narrow phones */
 @media (max-width: 380px) {
   .nexa-section {
-    padding: 48px 13px;
+    padding: 48px 0;
   }
 
   .nexa-section-heading h2,
@@ -2589,7 +2645,7 @@ html[dir="rtl"] .nexa-home2-cta-overlay {
   }
 
   .nexa-appointment {
-    padding: 0 13px 48px;
+    padding: 0 0 48px;
   }
 
   .nexa-appointment-inner {
@@ -2605,7 +2661,7 @@ html[dir="rtl"] .nexa-home2-cta-overlay {
 /* Extra-wide monitors */
 @media (min-width: 1500px) {
   .nexa-section {
-    padding: 110px 32px;
+    padding: 110px 0;
   }
 
   .nexa-precision-layout,

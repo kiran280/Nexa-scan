@@ -25,10 +25,59 @@
 
     --shadow: 0 8px 30px rgba(20, 50, 80, 0.08);
     --transition: 0.3s ease;
+
+    /* Aliases for page stylesheets in Light mode */
+    --nx-blue: #0869B5;
+    --nx-blue-dark: #064F8A;
+    --nx-blue-light: #E8F4FC;
+    --nx-green: #10A889;
+    --nx-teal: #10A889;
+    --nx-teal-light: #E4F8F2;
+    --nx-teal-dark: #087F68;
+    --nx-bg: var(--page-bg);
+    --nx-bg-soft: var(--section-bg);
+    --nx-card: var(--card-bg);
+    --nx-surface: var(--section-bg);
+    --nx-text: var(--text);
+    --nx-heading: #172B45;
+    --nx-muted: var(--muted);
+    --nx-border: var(--border);
+    --nx-field: #FFFFFF;
+    --nx-shadow: var(--shadow);
+    --nx-transition: var(--transition);
+
+    --nexa-bg: var(--page-bg);
+    --nexa-card: var(--card-bg);
+    --nexa-text: var(--text);
+    --nexa-muted: var(--muted);
+    --nexa-border: var(--border);
+    --nexa-shadow: var(--shadow);
+
+    --np-bg: #F5F9FC;
+    --np-card: #FFFFFF;
+    --np-heading: #172B45;
+    --np-text: #64748B;
+    --np-border: rgba(32, 48, 64, 0.12);
+
+    --nsh-bg: var(--page-bg);
+    --nsh-text: var(--text);
+    --nsh-muted: var(--muted);
+
+    --sp-bg: var(--page-bg);
+    --sp-surface: var(--section-bg);
+    --sp-card: var(--card-bg);
+    --sp-text: var(--text);
+    --sp-muted: var(--muted);
+    --sp-border: var(--border);
+    --sp-shadow: var(--shadow);
+    --sp-transition: var(--transition);
+    --soft-green: var(--green-light);
+    --soft-blue: var(--blue-light);
 }
 
 /* Dark theme */
-body.dark {
+body.dark,
+html[data-theme="dark"] {
     --page-bg: #000000;
     --section-bg: #000000;
     --card-bg: #080808;
@@ -44,6 +93,44 @@ body.dark {
     --footer-muted: #C0C0C0;
 
     --shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+
+    /* Aliases for page stylesheets in Dark mode */
+    --nx-bg: #000000;
+    --nx-bg-soft: #05070a;
+    --nx-card: #080808;
+    --nx-surface: #0a0e14;
+    --nx-text: #FFFFFF;
+    --nx-heading: #FFFFFF;
+    --nx-muted: #B8C2CC;
+    --nx-border: rgba(255, 255, 255, 0.14);
+    --nx-field: #0a0e14;
+    --nx-blue-light: rgba(8, 105, 181, 0.15);
+    --nx-teal-light: rgba(16, 168, 137, 0.15);
+
+    --nexa-bg: #000000;
+    --nexa-card: #080808;
+    --nexa-text: #FFFFFF;
+    --nexa-muted: #B8C2CC;
+    --nexa-border: rgba(255, 255, 255, 0.14);
+
+    --np-bg: #000000;
+    --np-card: #080808;
+    --np-heading: #FFFFFF;
+    --np-text: #B8C2CC;
+    --np-border: rgba(255, 255, 255, 0.14);
+
+    --nsh-bg: #000000;
+    --nsh-text: #FFFFFF;
+    --nsh-muted: #B8C2CC;
+
+    --sp-bg: #000000;
+    --sp-surface: #05070a;
+    --sp-card: #080808;
+    --sp-text: #FFFFFF;
+    --sp-muted: #B8C2CC;
+    --sp-border: rgba(255, 255, 255, 0.14);
+    --soft-green: rgba(16, 168, 137, 0.15);
+    --soft-blue: rgba(8, 105, 181, 0.15);
 }
 
  
@@ -57,6 +144,7 @@ body.dark {
  
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
  
 body {
@@ -64,6 +152,7 @@ body {
     background: var(--page-bg);
     color: var(--text);
     min-height: 100vh;
+    overflow-x: hidden;
     transition: background var(--transition), color var(--transition);
 }
  
@@ -116,6 +205,111 @@ header,
     display: flex;
     align-items: center;
     gap: 28px;
+}
+
+/* ========================================================
+   MASTER UNIFIED CONTAINER ALIGNMENT SYSTEM
+   Ensures ALL pages have the EXACT SAME straight-line
+   left margin (aligned to the Logo) and right margin
+   (aligned to the Appointment button in the header).
+   ======================================================== */
+:root {
+    --site-max-width: 1200px;
+    --site-container-width: min(1200px, 92%);
+}
+
+.header-container,
+.footer-container,
+.footer-bottom,
+.nx-container,
+.nx-hero-container,
+.nexa-wrap,
+.nexa-premium-container,
+.nexa-home2-cta-container,
+.nexa-about-container,
+.nsh-container,
+.nxs-container,
+.nx-blog-container,
+.nx-detail-container,
+.sp-container,
+.nx-hero-trust,
+.nx-contact-hero-inner,
+.nx-contact-info-container,
+.nx-ps-container,
+#nxAppointmentContainer,
+.nx-location-container,
+.nx-contact-faq-container,
+.nx-final-cta-container,
+.nexa-premium-hero .nexa-hero-content {
+    width: min(1200px, 92%) !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 1100px) {
+    :root {
+        --site-container-width: 94%;
+    }
+    .header-container,
+    .footer-container,
+    .footer-bottom,
+    .nx-container,
+    .nx-hero-container,
+    .nexa-wrap,
+    .nexa-premium-container,
+    .nexa-home2-cta-container,
+    .nexa-about-container,
+    .nsh-container,
+    .nxs-container,
+    .nx-blog-container,
+    .nx-detail-container,
+    .sp-container,
+    .nx-hero-trust,
+    .nx-contact-hero-inner,
+    .nx-contact-info-container,
+    .nx-ps-container,
+    #nxAppointmentContainer,
+    .nx-location-container,
+    .nx-contact-faq-container,
+    .nx-final-cta-container,
+    .nexa-premium-hero .nexa-hero-content {
+        width: 94% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 360px) {
+    :root {
+        --site-container-width: 96%;
+    }
+    .header-container,
+    .footer-container,
+    .footer-bottom,
+    .nx-container,
+    .nx-hero-container,
+    .nexa-wrap,
+    .nexa-premium-container,
+    .nexa-home2-cta-container,
+    .nexa-about-container,
+    .nsh-container,
+    .nxs-container,
+    .nx-blog-container,
+    .nx-detail-container,
+    .sp-container,
+    .nx-hero-trust,
+    .nx-contact-hero-inner,
+    .nx-contact-info-container,
+    .nx-ps-container,
+    #nxAppointmentContainer,
+    .nx-location-container,
+    .nx-contact-faq-container,
+    .nx-final-cta-container,
+    .nexa-premium-hero .nexa-hero-content {
+        width: 96% !important;
+        max-width: 100% !important;
+    }
 }
  
  
@@ -527,10 +721,13 @@ html[dir="rtl"] .nav-item:hover .dropdown-menu {
     }
  
     .login-btn {
-        width: 38px;
-        min-height: 38px;
-        padding: 0;
-        font-size: 0;
+        width: auto;
+        min-width: 72px;
+        min-height: 36px;
+        padding: 0 10px;
+        font-size: 11px;
+        font-weight: 700;
+        white-space: nowrap;
     }
  
     .main-nav {
@@ -582,7 +779,7 @@ html[dir="rtl"] .nav-item:hover .dropdown-menu {
                 hidden;
 
             padding:
-                70px 20px 0;
+                70px 0 0;
 
             background:
                 var(--footer-bg);
@@ -4117,9 +4314,9 @@ body {
         height: 33px;
         min-height: 33px;
 
-        padding: 0 6px;
+        padding: 0 8px;
 
-        font-size: 9px;
+        font-size: 11px;
         border-radius: 6px;
     }
 
@@ -4208,15 +4405,15 @@ body {
     .login-btn {
         display: inline-flex;
 
-        min-width: 57px;
+        min-width: 60px;
         width: auto;
 
         height: 31px;
         min-height: 31px;
 
-        padding: 0 5px;
+        padding: 0 6px;
 
-        font-size: 8px;
+        font-size: 10px;
 
         border-radius: 6px;
 

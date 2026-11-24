@@ -30,7 +30,8 @@
 .nsh-container {
   position: relative;
   z-index: 2;
-  width: min(1120px, calc(100% - 64px));
+  width: min(1200px, 92%);
+  max-width: 1200px;
   min-height: 400px;
   margin: 0 auto;
   display: grid;
@@ -196,14 +197,15 @@
 }
 
 .nsh-btn-outline {
-  color: var(--black) !important;
+  color: var(--blue) !important;
   background: var(--nsh-card);
-  border-color: var(--green);
+  border: 1.5px solid var(--green);
 }
 
 .nsh-btn-outline:hover {
   border-color: var(--blue);
-  color: var(--blue);
+  color: var(--blue) !important;
+  background: rgba(16, 168, 137, 0.08);
 }
 
 .nsh-trust-row {
@@ -786,9 +788,21 @@ html[data-theme="dark"] .nsh-btn-outline,
 html.dark .nsh-btn-outline,
 .dark-mode .nsh-btn-outline,
 .dark-theme .nsh-btn-outline {
-  background: #0c1119;
-  border-color: #24415e;
-  color: #73bdff !important;
+  background: transparent !important;
+  border: 1.5px solid var(--green) !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .nsh-btn-outline:hover,
+body.dark-theme .nsh-btn-outline:hover,
+body.dark .nsh-btn-outline:hover,
+html[data-theme="dark"] .nsh-btn-outline:hover,
+html.dark .nsh-btn-outline:hover,
+.dark-mode .nsh-btn-outline:hover,
+.dark-theme .nsh-btn-outline:hover {
+  border-color: var(--blue) !important;
+  color: #ffffff !important;
+  background: rgba(16, 168, 137, 0.15) !important;
 }
 
 /* RTL support */
@@ -1307,7 +1321,8 @@ body.rtl .nsh-btn:hover svg {
 }
 
 .nxs-container {
-  width: min(1120px, calc(100% - 64px));
+  width: min(1200px, 92%);
+  max-width: 1200px;
   margin-inline: auto;
 }
 
